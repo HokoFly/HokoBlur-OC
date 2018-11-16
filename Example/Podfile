@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HokoBlur-OC_Example' do
+  pod 'HokoBlur-OC', :path => '../'
+
+  target 'HokoBlur-OC_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

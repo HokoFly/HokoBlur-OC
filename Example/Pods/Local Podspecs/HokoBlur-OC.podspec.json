@@ -1,0 +1,22 @@
+{
+  "name": "HokoBlur-OC",
+  "version": "0.1.0",
+  "summary": "A short description of HokoBlur-OC.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/HokoFly/HokoBlur-OC",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "HokoFly": "xiangpi@mogujie.com"
+  },
+  "source": {
+    "git": "https://github.com/HokoFly/HokoBlur-OC.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HokoBlur-OC/Classes/**/*"
+}

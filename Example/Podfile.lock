@@ -1,0 +1,16 @@
+PODS:
+  - HokoBlur-OC (0.1.0)
+
+DEPENDENCIES:
+  - HokoBlur-OC (from `../`)
+
+EXTERNAL SOURCES:
+  HokoBlur-OC:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HokoBlur-OC: 3c38ba5189512b145da6f998759ab69ddc62217b
+
+PODFILE CHECKSUM: a7740712bdede3de1088c8eaab75b03118fb3189
+
+COCOAPODS: 1.6.0.beta.2

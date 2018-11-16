@@ -1,0 +1,6 @@
+framework module HokoBlur_OC {
+  umbrella header "HokoBlur-OC-umbrella.h"
+
+  export *
+  module * { export * }
+}
