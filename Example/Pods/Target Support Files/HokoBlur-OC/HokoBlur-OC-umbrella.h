@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "UIImage+PixelsData.h"
 
 FOUNDATION_EXPORT double HokoBlur_OCVersionNumber;
 FOUNDATION_EXPORT const unsigned char HokoBlur_OCVersionString[];

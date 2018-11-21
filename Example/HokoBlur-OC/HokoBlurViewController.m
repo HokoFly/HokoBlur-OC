@@ -7,6 +7,7 @@
 //
 
 #import "HokoBlurViewController.h"
+#import "UIImage+PixelsData.h"
 
 @interface HokoBlurViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
@@ -22,7 +23,8 @@
     UIImage *image = [UIImage imageNamed:@"sample1"];
     self.imageView = [self.imageView initWithImage: image];
 
-    
+    NSData *data = [image toPixelsData];
+    NSLog(@"result: %@", data);
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

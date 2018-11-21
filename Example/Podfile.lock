@@ -1,5 +1,5 @@
 PODS:
-  - HokoBlur-OC (0.1.0)
+  - HokoBlur-OC (0.0.1)
 
 DEPENDENCIES:
   - HokoBlur-OC (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HokoBlur-OC: 3c38ba5189512b145da6f998759ab69ddc62217b
+  HokoBlur-OC: 36f4b5e3f14c064a86508dc57dd0ccb4c3d8c676
 
 PODFILE CHECKSUM: a7740712bdede3de1088c8eaab75b03118fb3189
 
