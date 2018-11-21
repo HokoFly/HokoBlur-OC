@@ -9,6 +9,7 @@
 #import "HokoBlurViewController.h"
 
 @interface HokoBlurViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    UIImage *image = [UIImage imageNamed:@"sample1"];
+    self.imageView = [self.imageView initWithImage: image];
+
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
