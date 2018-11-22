@@ -20,12 +20,20 @@
 {
     [super viewDidLoad];
 
-    UIImage *image = [UIImage imageNamed:@"sample1"];
-    self.imageView = [self.imageView initWithImage: image];
+    dispatch_queue_t blurQueue = dispatch_queue_create("blur.queue", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(blurQueue, ^{
+        UIImage *image = [UIImage imageNamed:@"sample1"];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.imageView = [self.imageView initWithImage: image];
+        });
+        NSData *data = [image toPixelsData];
+        NSLog(@"result: %@", data);
 
-    NSData *data = [image toPixelsData];
-    NSLog(@"result: %@", data);
-	// Do any additional setup after loading the view, typically from a nib.
+
+    });
+
+
+
 }
 
 - (void)didReceiveMemoryWarning
