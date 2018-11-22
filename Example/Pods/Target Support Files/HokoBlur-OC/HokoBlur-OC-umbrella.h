@@ -10,6 +10,9 @@
 #endif
 #endif
 
+#import "BlurFilter.h"
+#import "BlurUtil.h"
+#import "StackBlurFilter.h"
 #import "UIImage+PixelsData.h"
 
 FOUNDATION_EXPORT double HokoBlur_OCVersionNumber;
