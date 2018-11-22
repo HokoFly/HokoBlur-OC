@@ -24,20 +24,46 @@
     dispatch_async(blurQueue, ^{
         UIImage *image = [UIImage imageNamed:@"sample1"];
         [self setImage:image];
-        NSData *data = [image toPixelsData];
 
         CGFloat w = image.size.width * image.scale;
         CGFloat h = image.size.height * image.scale;
+        CGFloat sampleFactor = 5.0;
+        NSUInteger scaleW = (NSUInteger) (w / sampleFactor);
+        NSUInteger scaleH = (NSUInteger) (h / sampleFactor);
 
-        NSData *result = [BlurFilter blur:data radius:20 width:(NSInteger) w height:(NSInteger) h];
-        UIImage *blurredImage = [UIImage fromPixelsData:result width:(NSUInteger) w height:(NSUInteger) h];
+        UIImage *scaleImage = [self resizeImage:image toSize:CGSizeMake(scaleW, scaleH)];
 
-        [self setImage:blurredImage];
+        NSData *data = [scaleImage toPixelsData];
+
+        NSData *result = [BlurFilter blur:data radius:10 width:scaleW height:scaleH];
+        UIImage *blurredImage = [UIImage fromPixelsData:result width:scaleW height:scaleH];
+
+        UIImage *upscaleImage = [self resizeImage:blurredImage toSize:CGSizeMake(scaleW, scaleH)];
+
+        [self setImage:upscaleImage];
 
     });
 
 
 }
+
+
+- (UIImage *)resizeImage:(UIImage *)originImage toSize:(CGSize)scaledSize {
+
+    NSLog(@"w=%ld, h=%ld", (long) scaledSize.width, (long) scaledSize.height);
+
+    UIGraphicsBeginImageContext(scaledSize);
+    CGContextRef  context = UIGraphicsGetCurrentContext();
+    CGContextTranslateCTM(context, 0.0, scaledSize.height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    CGContextDrawImage(context, CGRectMake(0.0f, 0.0f, scaledSize.width, scaledSize.height), originImage.CGImage);
+
+    UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+
+    UIGraphicsEndImageContext();
+    return resizedImage;
+}
+
 
 - (void)setImage:(UIImage *)image {
     dispatch_async(dispatch_get_main_queue(), ^{

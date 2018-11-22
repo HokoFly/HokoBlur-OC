@@ -47,7 +47,7 @@
     NSUInteger bitsPerComponent = 8;
     NSUInteger bytesPerRow = 4 * w;
 
-    unsigned char *pixels = data.bytes;
+    unsigned char *pixels = (unsigned char *)data.bytes;
     CGDataProviderRef provider = CGDataProviderCreateWithData(nil, pixels, w * h * 4, nil);
 
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
