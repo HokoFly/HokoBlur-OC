@@ -17,7 +17,6 @@
     stackBlur((int *) pixels, r, 1, 0, hokoblur::VERTICAL, (int) w, (int) h);
 
     NSData *result = [NSData dataWithBytes:pixels length:data.length];
-    NSLog(@"after blur: %@", result);
 
     return result;
 }

@@ -50,8 +50,6 @@
 
 - (UIImage *)resizeImage:(UIImage *)originImage toSize:(CGSize)scaledSize {
 
-    NSLog(@"w=%ld, h=%ld", (long) scaledSize.width, (long) scaledSize.height);
-
     UIGraphicsBeginImageContext(scaledSize);
     CGContextRef  context = UIGraphicsGetCurrentContext();
     CGContextTranslateCTM(context, 0.0, scaledSize.height);
@@ -66,8 +64,12 @@
 
 
 - (void)setImage:(UIImage *)image {
+    __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[self imageView] setImage:image];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (strongSelf) {
+            [[strongSelf imageView] setImage:image];
+        }
     });
 }
 
