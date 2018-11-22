@@ -42,7 +42,7 @@
 
 }
 
-+ (UIImage *)fromPixelsData:(NSData *)data width:(NSUInteger)w height:(NSUInteger)h {
++ (instancetype)fromPixelsData:(NSData *)data width:(NSUInteger)w height:(NSUInteger)h {
     NSUInteger bitsPerPixel = 32;
     NSUInteger bitsPerComponent = 8;
     NSUInteger bytesPerRow = 4 * w;

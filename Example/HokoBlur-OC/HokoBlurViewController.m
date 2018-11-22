@@ -11,14 +11,13 @@
 #import "BlurFilter.h"
 
 @interface HokoBlurViewController ()
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property(strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
 @implementation HokoBlurViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
     dispatch_queue_t blurQueue = dispatch_queue_create("blur.queue", DISPATCH_QUEUE_CONCURRENT);
@@ -31,24 +30,22 @@
         CGFloat h = image.size.height * image.scale;
 
         NSData *result = [BlurFilter blur:data radius:20 width:(NSInteger) w height:(NSInteger) h];
-        UIImage *blurredImage = [UIImage fromPixelsData:result width:(NSUInteger)w height:(NSUInteger)h];
+        UIImage *blurredImage = [UIImage fromPixelsData:result width:(NSUInteger) w height:(NSUInteger) h];
 
         [self setImage:blurredImage];
 
     });
 
 
-
 }
 
-- (void)setImage: (UIImage *)image {
+- (void)setImage:(UIImage *)image {
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.imageView = [self.imageView initWithImage: image];
+        [[self imageView] setImage:image];
     });
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

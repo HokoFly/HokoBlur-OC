@@ -12,7 +12,7 @@ void doHorizontalBlur(int *pix, int w, int h, int radius, int startX, int startY
 
 void doVerticalBlur(int *pix, int w, int h, int radius, int startX, int startY, int deltaX, int deltaY);
 
-void stackBlur(int *pixels, int j_radius, int j_cores, int j_index, int j_direction, int w, int h) {
+void stackBlur(int *pixels, int radius, int cores, int index, int direction, int w, int h) {
 
     using namespace hokoblur;
 
@@ -20,25 +20,25 @@ void stackBlur(int *pixels, int j_radius, int j_cores, int j_index, int j_direct
         return;
     }
 
-    if (j_direction == HORIZONTAL) {
-        int deltaY = h / j_cores;
-        int startY = j_index * deltaY;
+    if (direction == HORIZONTAL) {
+        int deltaY = h / cores;
+        int startY = index * deltaY;
 
-        if (j_index == j_cores - 1) {
-            deltaY = h - (j_cores - 1) * deltaY;
+        if (index == cores - 1) {
+            deltaY = h - (cores - 1) * deltaY;
         }
 
-        doHorizontalBlur(pixels, w, h, j_radius, 0, startY, w, deltaY);
+        doHorizontalBlur(pixels, w, h, radius, 0, startY, w, deltaY);
 
-    } else if (j_direction == VERTICAL) {
-        int deltaX = w / j_cores;
-        int startX = j_index * deltaX;
+    } else if (direction == VERTICAL) {
+        int deltaX = w / cores;
+        int startX = index * deltaX;
 
-        if (j_index == j_cores - 1) {
-            deltaX = w - (j_cores - 1) * (w / j_cores);
+        if (index == cores - 1) {
+            deltaX = w - (cores - 1) * (w / cores);
         }
 
-        doVerticalBlur(pixels, w, h, j_radius, startX, 0, deltaX, h);
+        doVerticalBlur(pixels, w, h, radius, startX, 0, deltaX, h);
     }
 
 }
