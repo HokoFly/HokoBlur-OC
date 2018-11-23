@@ -49,7 +49,6 @@ void boxBlur(int *pixels, int radius, int cores, int index, int direction, int w
 
 void boxBlurHorizontal(int *in, int *out, int width, int height, int radius, int startX,
         int startY, int deltaX, int deltaY) {
-    int widthMinus1 = width - 1;
     int tableSize = 2 * radius + 1;
     int divide[256 * tableSize];
 
@@ -95,7 +94,6 @@ void boxBlurHorizontal(int *in, int *out, int width, int height, int radius, int
 
 void boxBlurVertical(int *in, int *out, int width, int height, int radius, int startX, int startY,
         int deltaX, int deltaY) {
-    int heightMinus1 = height - 1;
     int tableSize = 2 * radius + 1;
     int divide[256 * tableSize];
 

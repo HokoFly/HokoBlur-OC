@@ -47,11 +47,9 @@ void stackBlur(int *pixels, int radius, int cores, int index, int direction, int
 void doHorizontalBlur(int *pix, int w, int h, int radius, int startX, int startY, int deltaX, int deltaY) {
 
     int wm = w - 1;
-    int hm = h - 1;
-    int wh = w * h;
     int div = radius + radius + 1;
 
-    int rsum, gsum, bsum, x, y, i, p, yp, yi, yw;
+    int rsum, gsum, bsum, x, y, i, p, yi;
     int *vmin;
 
     vmin = (int *) malloc(sizeof(int) * max(w, h));
@@ -66,9 +64,7 @@ void doHorizontalBlur(int *pix, int w, int h, int radius, int startX, int startY
         dv[i] = (short) (i / divsum);
     }
 
-    yi = 0;
-
-//int stack[div][3];
+    //int stack[div][3];
 
     int (*stack)[3];
     stack = (int (*)[3]) malloc(sizeof(int) * div * 3);
@@ -166,13 +162,11 @@ void doHorizontalBlur(int *pix, int w, int h, int radius, int startX, int startY
 
 void doVerticalBlur(int *pix, int w, int h, int radius, int startX, int startY, int deltaX, int deltaY) {
 
-    int wm = w - 1;
     int hm = h - 1;
-    int wh = w * h;
     int hmw = hm * w;
     int div = radius + radius + 1;
 
-    int rsum, gsum, bsum, x, y, i, p, yp, yi, yw;
+    int rsum, gsum, bsum, x, y, i, p, yi;
     int *vmin;
 
     vmin = (int *) malloc(sizeof(int) * max(w, h));
