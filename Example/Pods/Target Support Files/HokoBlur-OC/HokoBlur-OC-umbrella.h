@@ -12,6 +12,7 @@
 
 #import "BlurUtil.h"
 #import "BoxBlurFilter.h"
+#import "GaussianBlurFilter.h"
 #import "StackBlurFilter.h"
 #import "BlurFilter.h"
 #import "UIImage+PixelsData.h"

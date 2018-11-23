@@ -3,6 +3,7 @@
 //
 
 #import "BlurFilter.h"
+#import "GaussianBlurFilter.h"
 #import "StackBlurFilter.h"
 #import "BoxBlurFilter.h"
 
@@ -16,8 +17,10 @@
 
 //    stackBlur((int *) pixels, r, 1, 0, hokoblur::HORIZONTAL, (int) w, (int) h);
 //    stackBlur((int *) pixels, r, 1, 0, hokoblur::VERTICAL, (int) w, (int) h);
-    boxBlur((int *) pixels, r, 1, 0, hokoblur::HORIZONTAL, (int) w, (int) h);
-    boxBlur((int *) pixels, r, 1, 0, hokoblur::VERTICAL, (int) w, (int) h);
+//    boxBlur((int *) pixels, r, 1, 0, hokoblur::HORIZONTAL, (int) w, (int) h);
+//    boxBlur((int *) pixels, r, 1, 0, hokoblur::VERTICAL, (int) w, (int) h);
+    gaussianBlur((int *) pixels, r, 1, 0, hokoblur::HORIZONTAL, (int) w, (int) h);
+    gaussianBlur((int *) pixels, r, 1, 0, hokoblur::VERTICAL, (int) w, (int) h);
 
     NSData *result = [NSData dataWithBytes:pixels length:data.length];
 
