@@ -4,19 +4,19 @@
 
 #include "BoxBlurFilter.h"
 
-void boxBlurHorizontal(int[], int[], int width, int height, int radius, int, int, int, int);
-void boxBlurVertical(int[], int[], int width, int height, int radius, int, int, int, int);
+void boxBlurHorizontal(uint32_t *, uint32_t *, int width, int radius, int, int, int, int);
+void boxBlurVertical(uint32_t *, uint32_t *, int width, int radius, int, int, int, int);
 
 using namespace hokoblur;
 
-void boxBlur(int *pixels, int radius, int cores, int index, int direction, int w, int h) {
+void boxBlur(uint32_t *pixels, int radius, int cores, int index, int direction, int w, int h) {
 
     if (pixels == NULL) {
         return;
     }
 
-    int *copy = NULL;
-    copy = (int *) malloc(sizeof(int) * w * h);
+    uint32_t *copy = NULL;
+    copy = (uint32_t *) malloc(sizeof(uint32_t) * w * h);
 
     for (int i = 0; i < w * h; i++) {
         copy[i] = pixels[i];
@@ -30,7 +30,7 @@ void boxBlur(int *pixels, int radius, int cores, int index, int direction, int w
             deltaY = h - (cores - 1) * deltaY;
         }
 
-        boxBlurHorizontal(copy, pixels, w, h, radius, 0, startY, w, deltaY);
+        boxBlurHorizontal(copy, pixels, w, radius, 0, startY, w, deltaY);
 
     } else if (direction == VERTICAL) {
         int deltaX = w / cores;
@@ -40,19 +40,18 @@ void boxBlur(int *pixels, int radius, int cores, int index, int direction, int w
             deltaX = w - (cores - 1) * (w / cores);
         }
 
-        boxBlurVertical(copy, pixels, w, h, radius, startX, 0, deltaX, h);
+        boxBlurVertical(copy, pixels, w, radius, startX, 0, deltaX, h);
     }
 
     free(copy);
 
 }
 
-void boxBlurHorizontal(int *in, int *out, int width, int height, int radius, int startX,
-        int startY, int deltaX, int deltaY) {
+void boxBlurHorizontal(uint32_t *in, uint32_t *out, int width, int radius, int startX, int startY, int deltaX, int deltaY) {
     int tableSize = 2 * radius + 1;
-    int divide[256 * tableSize];
+    uint32_t divide[256 * tableSize];
 
-    for (int i = 0; i < 256 * tableSize; i++)
+    for (uint32_t i = 0; i < 256 * tableSize; i++)
         divide[i] = i / tableSize;
 
     for (int y = startY; y < startY + deltaY; y++) {
@@ -92,12 +91,11 @@ void boxBlurHorizontal(int *in, int *out, int width, int height, int radius, int
 }
 
 
-void boxBlurVertical(int *in, int *out, int width, int height, int radius, int startX, int startY,
-        int deltaX, int deltaY) {
+void boxBlurVertical(uint32_t *in, uint32_t *out, int width, int radius, int startX, int startY, int deltaX, int deltaY) {
     int tableSize = 2 * radius + 1;
-    int divide[256 * tableSize];
+    uint32_t divide[256 * tableSize];
 
-    for (int i = 0; i < 256 * tableSize; i++)
+    for (uint32_t i = 0; i < 256 * tableSize; i++)
         divide[i] = i / tableSize;
 
     for (int x = startX; x < startX + deltaX; x++) {

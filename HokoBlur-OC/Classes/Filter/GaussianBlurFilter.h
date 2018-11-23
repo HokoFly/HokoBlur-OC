@@ -10,6 +10,6 @@
 #include "math.h"
 #include "BlurUtil.h"
 
-void gaussianBlur(int *pixels, int radius, int cores, int index, int direction, int w, int h);
+void gaussianBlur(uint32_t *pixels, int radius, int cores, int index, int direction, int w, int h);
 
 #endif //HOKO_BLUR_GAUSSIANBLURFILTER_H

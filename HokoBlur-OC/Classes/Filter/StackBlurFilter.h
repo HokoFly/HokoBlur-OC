@@ -13,6 +13,6 @@
 #define max(a, b) ((a)>(b)?(a):(b))
 #define min(a, b) ((a)<(b)?(a):(b))
 
-void stackBlur(int *pixels, int radius, int cores, int index, int direction, int w, int h);
+void stackBlur(uint32_t *pixels, int radius, int cores, int index, int direction, int w, int h);
 
 #endif

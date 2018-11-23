@@ -8,13 +8,11 @@ using namespace hokoblur;
 
 float *makeKernel(int r);
 
-void gaussianBlurHorizontal(float *kernel, int *inPixels, int *outPixels, int width,
-        int height, int radius, int startX, int startY, int deltaX, int deltaY);
+void gaussianBlurHorizontal(float *kernel, uint32_t *inPixels, uint32_t *outPixels, int width, int radius, int startX, int startY, int deltaX, int deltaY);
 
-void gaussianBlurVertical(float *kernel, int *inPixels, int *outPixels, int width, int height,
-        int radius, int startX, int startY, int deltaX, int deltaY);
+void gaussianBlurVertical(float *kernel, uint32_t *inPixels, uint32_t *outPixels, int width, int radius, int startX, int startY, int deltaX, int deltaY);
 
-void gaussianBlur(int *pixels, int radius, int cores, int index, int direction, int w, int h) {
+void gaussianBlur(uint32_t *pixels, int radius, int cores, int index, int direction, int w, int h) {
     if (pixels == NULL) {
         return;
     }
@@ -22,8 +20,8 @@ void gaussianBlur(int *pixels, int radius, int cores, int index, int direction, 
     float *kernel = NULL;
     kernel = makeKernel(radius);
 
-    int *copy = NULL;
-    copy = (int *) malloc(sizeof(int) * w * h);
+    uint32_t *copy = NULL;
+    copy = (uint32_t *) malloc(sizeof(uint32_t) * w * h);
 
     for (int i = 0; i < w * h; i++) {
         copy[i] = pixels[i];
@@ -37,7 +35,7 @@ void gaussianBlur(int *pixels, int radius, int cores, int index, int direction, 
             deltaY = h - (cores - 1) * deltaY;
         }
 
-        gaussianBlurHorizontal(kernel, copy, pixels, w, h, radius, 0, startY, w, deltaY);
+        gaussianBlurHorizontal(kernel, copy, pixels, w, radius, 0, startY, w, deltaY);
 
     } else if (direction == VERTICAL) {
         int deltaX = w / cores;
@@ -47,7 +45,7 @@ void gaussianBlur(int *pixels, int radius, int cores, int index, int direction, 
             deltaX = w - (cores - 1) * (w / cores);
         }
 
-        gaussianBlurVertical(kernel, copy, pixels, w, h, radius, startX, 0, deltaX, h);
+        gaussianBlurVertical(kernel, copy, pixels, w, radius, startX, 0, deltaX, h);
     }
 
 
@@ -55,9 +53,7 @@ void gaussianBlur(int *pixels, int radius, int cores, int index, int direction, 
     free(kernel);
 }
 
-void gaussianBlurHorizontal(float *kernel, int *inPixels, int *outPixels, int width, int height,
-        int radius,
-        int startX, int startY, int deltaX, int deltaY) {
+void gaussianBlurHorizontal(float *kernel, uint32_t *inPixels, uint32_t *outPixels, int width, int radius, int startX, int startY, int deltaX, int deltaY) {
     int cols = 2 * radius + 1;
     int cols2 = cols / 2;
     int x, y, col;
@@ -88,18 +84,16 @@ void gaussianBlurHorizontal(float *kernel, int *inPixels, int *outPixels, int wi
             }
 
             int outIndex = ioffset + x;
-            int ia = (inPixels[ioffset + x] >> 24) & 0xff;
-            int ir = clamp((int) (r + 0.5), 0, 255);
-            int ig = clamp((int) (g + 0.5), 0, 255);
-            int ib = clamp((int) (b + 0.5), 0, 255);
+            uint32_t ia = (inPixels[ioffset + x] >> 24) & 0xff;
+            uint32_t ir = (uint32_t)clamp((uint32_t) (r + 0.5), 0, 255);
+            uint32_t ig = (uint32_t)clamp((uint32_t) (g + 0.5), 0, 255);
+            uint32_t ib = (uint32_t)clamp((uint32_t) (b + 0.5), 0, 255);
             outPixels[outIndex] = (ia << 24) | (ir << 16) | (ig << 8) | ib;
         }
     }
 }
 
-void gaussianBlurVertical(float *kernel, int *inPixels, int *outPixels, int width, int height,
-        int radius,
-        int startX, int startY, int deltaX, int deltaY) {
+void gaussianBlurVertical(float *kernel, uint32_t *inPixels, uint32_t *outPixels, int width, int radius, int startX, int startY, int deltaX, int deltaY) {
     int cols = 2 * radius + 1;
     int cols2 = cols / 2;
     int x, y, col;
@@ -129,10 +123,10 @@ void gaussianBlurVertical(float *kernel, int *inPixels, int *outPixels, int widt
                 }
             }
             int outIndex = ioffset + y * width;
-            int ia = (inPixels[ioffset + x] >> 24) & 0xff;
-            int ir = clamp((int) (r + 0.5), 0, 255);
-            int ig = clamp((int) (g + 0.5), 0, 255);
-            int ib = clamp((int) (b + 0.5), 0, 255);
+            uint32_t ia = (inPixels[ioffset + x] >> 24) & 0xff;
+            uint32_t ir = (uint32_t)clamp((uint32_t) (r + 0.5), 0, 255);
+            uint32_t ig = (uint32_t)clamp((uint32_t) (g + 0.5), 0, 255);
+            uint32_t ib = (uint32_t)clamp((uint32_t) (b + 0.5), 0, 255);
             outPixels[outIndex] = (ia << 24) | (ir << 16) | (ig << 8) | ib;
         }
     }

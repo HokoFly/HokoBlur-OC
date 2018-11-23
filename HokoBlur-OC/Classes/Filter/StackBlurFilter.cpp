@@ -8,11 +8,11 @@
 #include <stdio.h>
 #include "StackBlurFilter.h"
 
-void doHorizontalBlur(int *pix, int w, int h, int radius, int startX, int startY, int deltaX, int deltaY);
+void doHorizontalBlur(uint32_t *pix, int w, int h, int radius, int startX, int startY, int deltaX, int deltaY);
 
-void doVerticalBlur(int *pix, int w, int h, int radius, int startX, int startY, int deltaX, int deltaY);
+void doVerticalBlur(uint32_t *pix, int w, int h, int radius, int startX, int startY, int deltaX, int deltaY);
 
-void stackBlur(int *pixels, int radius, int cores, int index, int direction, int w, int h) {
+void stackBlur(uint32_t *pixels, int radius, int cores, int index, int direction, int w, int h) {
 
     using namespace hokoblur;
 
@@ -44,7 +44,7 @@ void stackBlur(int *pixels, int radius, int cores, int index, int direction, int
 }
 
 
-void doHorizontalBlur(int *pix, int w, int h, int radius, int startX, int startY, int deltaX, int deltaY) {
+void doHorizontalBlur(uint32_t *pix, int w, int h, int radius, int startX, int startY, int deltaX, int deltaY) {
 
     int wm = w - 1;
     int div = radius + radius + 1;
@@ -160,7 +160,7 @@ void doHorizontalBlur(int *pix, int w, int h, int radius, int startX, int startY
 }
 
 
-void doVerticalBlur(int *pix, int w, int h, int radius, int startX, int startY, int deltaX, int deltaY) {
+void doVerticalBlur(uint32_t *pix, int w, int h, int radius, int startX, int startY, int deltaX, int deltaY) {
 
     int hm = h - 1;
     int hmw = hm * w;
@@ -181,9 +181,7 @@ void doVerticalBlur(int *pix, int w, int h, int radius, int startX, int startY, 
         dv[i] = (short) (i / divsum);
     }
 
-    yi = 0;
-
-//int stack[div][3];
+    //int stack[div][3];
 
     int (*stack)[3];
     stack = (int (*)[3]) malloc(sizeof(int) * div * 3);
