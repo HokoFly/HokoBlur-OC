@@ -4,7 +4,6 @@
 //  Created by HokoFly on 2018/11/22.
 //
 
-#include <stdio.h>
 #include <stdlib.h>
 #import "BlurUtil.h"
 
@@ -14,6 +13,6 @@
 #define max(a, b) ((a)>(b)?(a):(b))
 #define min(a, b) ((a)<(b)?(a):(b))
 
-void stackBlur(int *pixels, int j_radius, int j_cores, int j_index, int j_direction, int w, int h);
+void stackBlur(int *pixels, int radius, int cores, int index, int direction, int w, int h);
 
 #endif
