@@ -14,7 +14,10 @@
 #import "BoxBlurFilter.h"
 #import "GaussianBlurFilter.h"
 #import "StackBlurFilter.h"
+#import "AbstractBlurProcessor.h"
 #import "BlurFilter.h"
+#import "BlurProcessor.h"
+#import "DefaultBlurProcessor.h"
 #import "UIImage+PixelsData.h"
 
 FOUNDATION_EXPORT double HokoBlur_OCVersionNumber;

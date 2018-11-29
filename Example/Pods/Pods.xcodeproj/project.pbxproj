@@ -8,26 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		019DFA06BF72021AB9CF1A24F63A996F /* Pods-HokoBlur-OC_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D9EE8DDA8A3D84B86D2902E315955A8 /* Pods-HokoBlur-OC_Tests-dummy.m */; };
-		0ABC65498AD4F6331ABC496BDDDA67F1 /* UIImage+PixelsData.h in Headers */ = {isa = PBXBuildFile; fileRef = 982AF6F733BC5C03E67CA0C445DA63BC /* UIImage+PixelsData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D66E7464E0B5C11B61914A0E390A447 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		0687392D8C00B6DB6C8FA85321CA446D /* StackBlurFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4042FFB5B3A4873B45BA7F674DEA661 /* StackBlurFilter.cpp */; };
 		16A046A463BA6CFE156EA7FDE845B4FE /* Pods-HokoBlur-OC_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD66E0FF8F29EF61E730FE5DEA43B1D /* Pods-HokoBlur-OC_Example-dummy.m */; };
-		23FCCD4AB2988B3B4A044C4F841234C8 /* HokoBlur-OC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC02681B6D1778A048DCAD764567461 /* HokoBlur-OC-dummy.m */; };
 		24CD8F4E1138ACC062C6AB5E16DD43C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		2C2AC57A34EE50567779933A7487C340 /* BlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE74643199F9E29AC83F749BE732983 /* BlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A5CAC7E357DE3737DC1D29B0E89BE44 /* BoxBlurFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7AA34B17F5443054D941E67BE371C /* BoxBlurFilter.cpp */; };
+		355F6BDC4810F2BD02B646138950D98D /* BoxBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = C2BBC5096E46721FBEBAF753946BB021 /* BoxBlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		367951A8D33882EFD2BB3E4EDB94048F /* AbstractBlurProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = C7F4EA957BA90FD1DC950A7FC3DA230A /* AbstractBlurProcessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4407F095B11EDE80066ED21FC0CCA9EE /* AbstractBlurProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6E7E00D33B4DC0835F8F4197A57AB5 /* AbstractBlurProcessor.m */; };
 		5582FEC03AAB17348B287259BACAE42C /* Pods-HokoBlur-OC_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A1D39B4369D9A96F8B1645A82461DDF /* Pods-HokoBlur-OC_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BCCB1D2406529839581D27EEFD17968 /* GaussianBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = F41DA7C9822AA412B88BC8C4604367E4 /* GaussianBlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63FADC44845F8CB951F5C02C95A495E1 /* StackBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 142C00EC76C53C9C61FDF43675FD47AC /* StackBlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CD2C281B5E9B6887647F4C553919454 /* BlurFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1818B0B1E54DB1893D497FEF2F22C710 /* BlurFilter.mm */; };
+		886FD21E32B70A714CEC2D2C219382B8 /* BlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E6EE56FBD3336AA8FDED95174F1001 /* BlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92770541553B7375E326F97DB143CF2E /* DefaultBlurProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9DA46A5E3747481F58686B543A9479 /* DefaultBlurProcessor.m */; };
 		9C86EABE4826EA063C7C51FE0E50EC53 /* Pods-HokoBlur-OC_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02E74ECF5A7AC02B8CDE5D264414E46A /* Pods-HokoBlur-OC_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB798D27D431164593008220A9562CC0 /* GaussianBlurFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E95261BAEC4B21F2454258B80627B08 /* GaussianBlurFilter.cpp */; };
-		B30C5858696F2D01CDC561050FFC0345 /* BoxBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = A20BCF4AB5B395E422FCCB72F456461B /* BoxBlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5198C537C9B5C12ADBCD1C699DB354F /* BlurUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61392AEB1D45F2A1AE1A75FE5CDE78F8 /* BlurUtil.cpp */; };
-		B5330B686152AF92F01C68C4D138BD5C /* StackBlurFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40A95D2370DDBCE7FEED2B37D3900D3A /* StackBlurFilter.cpp */; };
-		BD64A924C81A8766F904E92DD897B0D6 /* UIImage+PixelsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B1FCAF531C0E1B32DDC6A2C64752B3 /* UIImage+PixelsData.m */; };
+		A6308993272AD86CA2969F7B7DBB514C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		A6EF33E169967DD29247B0233212C2C6 /* BlurUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ACCC9AAF801AF3E1600FB7058C8D359 /* BlurUtil.cpp */; };
+		B9336B6FBB3FC805F4418F029840F15D /* UIImage+PixelsData.h in Headers */ = {isa = PBXBuildFile; fileRef = 319E64709EBA4ED63FD316A0536ADDE6 /* UIImage+PixelsData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD085C653F95E7BD03E0E7C8D98A5246 /* BlurProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F99A0AAAB9F8690EF6FEC5D01F7BC4 /* BlurProcessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C23832D9E66C17BD2E6B0A0321E56EE0 /* GaussianBlurFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E75F2E15E22E084F45DFE60FF801E /* GaussianBlurFilter.cpp */; };
 		C280CDA960B5AB4DDFF1208620341B36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		D088D9AE639899F59D7832F4F01D763C /* BlurUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 064185212611847CA147D81222380BF4 /* BlurUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC8E2E628961DA61AA1D0AF87F6CA639 /* HokoBlur-OC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 584A249CC2BF2F4277BF6AC55AD905E2 /* HokoBlur-OC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFBFB1571ADA39662B0CF9492A710DF9 /* BoxBlurFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52934095ABCF47B5B31F76B96361C46B /* BoxBlurFilter.cpp */; };
-		E5E665FCA6105B8E54128A057B4E67F5 /* BlurFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 89EEB35C3C798E94732B1624C5F9F6FC /* BlurFilter.mm */; };
-		FAC8C17E5A63D5394F1347AC889A85BD /* StackBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FE3CF5933F71136C037EC298E665DFE /* StackBlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA14749FE7F9104B0AE15C6D25304E6F /* BlurUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 1743B083D1313D1DE1581FA37ADCA288 /* BlurUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD55695BD0A432E0A5894A78A9B271C4 /* HokoBlur-OC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 920AF3248228A1A0ABE3E87C69D443D1 /* HokoBlur-OC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDB0F32F49A6A9E06F34F9DD08656983 /* GaussianBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B0BAA686ADABA4B25909A7091BBD383 /* GaussianBlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2E62D9A69EBE6F1B4F93406419F2862 /* DefaultBlurProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = D9DF74F04AE7F9EA1C9F8E876F929ADB /* DefaultBlurProcessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E64F8FF919E8A6C7C0E6DB2AF616A560 /* HokoBlur-OC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9096731066C80F23344C14DBA36B398 /* HokoBlur-OC-dummy.m */; };
+		E6B3F73D118997CAE36795169E555C62 /* UIImage+PixelsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2E901CEBA4600DE951C42CFDC407DA /* UIImage+PixelsData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,55 +47,60 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D6EACA403AE9884AF174AD0A7EACA50B;
+			remoteGlobalIDString = 0B041BF786DE7CA01E9A8D7FAAEA7529;
 			remoteInfo = "HokoBlur-OC";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		02E74ECF5A7AC02B8CDE5D264414E46A /* Pods-HokoBlur-OC_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HokoBlur-OC_Tests-umbrella.h"; sourceTree = "<group>"; };
-		064185212611847CA147D81222380BF4 /* BlurUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BlurUtil.h; path = "HokoBlur-OC/Classes/Filter/BlurUtil.h"; sourceTree = "<group>"; };
-		0EC02681B6D1778A048DCAD764567461 /* HokoBlur-OC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HokoBlur-OC-dummy.m"; sourceTree = "<group>"; };
+		142C00EC76C53C9C61FDF43675FD47AC /* StackBlurFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StackBlurFilter.h; path = "HokoBlur-OC/Classes/Filter/StackBlurFilter.h"; sourceTree = "<group>"; };
+		1743B083D1313D1DE1581FA37ADCA288 /* BlurUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BlurUtil.h; path = "HokoBlur-OC/Classes/Filter/BlurUtil.h"; sourceTree = "<group>"; };
+		1818B0B1E54DB1893D497FEF2F22C710 /* BlurFilter.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = BlurFilter.mm; path = "HokoBlur-OC/Classes/SDK/BlurFilter.mm"; sourceTree = "<group>"; };
 		19D2B0CBC4D6ECD993B8821EDDD6FE19 /* Pods-HokoBlur-OC_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HokoBlur-OC_Example-frameworks.sh"; sourceTree = "<group>"; };
+		26F99A0AAAB9F8690EF6FEC5D01F7BC4 /* BlurProcessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BlurProcessor.h; path = "HokoBlur-OC/Classes/SDK/BlurProcessor.h"; sourceTree = "<group>"; };
 		2A1D39B4369D9A96F8B1645A82461DDF /* Pods-HokoBlur-OC_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HokoBlur-OC_Example-umbrella.h"; sourceTree = "<group>"; };
+		2CE15D63B4F88465DF9210F1E17621DA /* HokoBlur-OC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HokoBlur-OC-prefix.pch"; sourceTree = "<group>"; };
 		2DACBC67D5A87C8220D188A9A70836A3 /* Pods-HokoBlur-OC_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HokoBlur-OC_Example.modulemap"; sourceTree = "<group>"; };
-		2FE3CF5933F71136C037EC298E665DFE /* StackBlurFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StackBlurFilter.h; path = "HokoBlur-OC/Classes/Filter/StackBlurFilter.h"; sourceTree = "<group>"; };
-		3583914EDC65D9D2B7489D9BE569B3FF /* HokoBlur-OC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "HokoBlur-OC.xcconfig"; sourceTree = "<group>"; };
-		40A95D2370DDBCE7FEED2B37D3900D3A /* StackBlurFilter.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = StackBlurFilter.cpp; path = "HokoBlur-OC/Classes/Filter/StackBlurFilter.cpp"; sourceTree = "<group>"; };
+		319E64709EBA4ED63FD316A0536ADDE6 /* UIImage+PixelsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+PixelsData.h"; path = "HokoBlur-OC/Classes/SDK/UIImage+PixelsData.h"; sourceTree = "<group>"; };
+		3A5F5CA77DB01CF38DA11D0C7F00DA26 /* HokoBlur-OC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "HokoBlur-OC.xcconfig"; sourceTree = "<group>"; };
 		434F1CF6338EF15950108D1176101023 /* Pods-HokoBlur-OC_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HokoBlur-OC_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		4D1428781DAB7587908FA413D60C3B80 /* HokoBlur-OC.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "HokoBlur-OC.podspec.json"; sourceTree = "<group>"; };
+		4C8E75F2E15E22E084F45DFE60FF801E /* GaussianBlurFilter.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = GaussianBlurFilter.cpp; path = "HokoBlur-OC/Classes/Filter/GaussianBlurFilter.cpp"; sourceTree = "<group>"; };
 		4DF05CAA325C7EF06DE7D028B590A035 /* Pods-HokoBlur-OC_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HokoBlur-OC_Tests-Info.plist"; sourceTree = "<group>"; };
 		4EEC7215D6FFF59FA4011C149BEC1BC7 /* Pods-HokoBlur-OC_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HokoBlur-OC_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4F81D24F149F04D39B76F4F135AA3011 /* Pods_HokoBlur_OC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HokoBlur_OC_Example.framework; path = "Pods-HokoBlur-OC_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		52934095ABCF47B5B31F76B96361C46B /* BoxBlurFilter.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = BoxBlurFilter.cpp; path = "HokoBlur-OC/Classes/Filter/BoxBlurFilter.cpp"; sourceTree = "<group>"; };
 		547C7CC56BCDAE03688AD21B955D6397 /* Pods_HokoBlur_OC_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HokoBlur_OC_Tests.framework; path = "Pods-HokoBlur-OC_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54EF098CBE79321BC92A602FA3BCABB7 /* Pods-HokoBlur-OC_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HokoBlur-OC_Tests.modulemap"; sourceTree = "<group>"; };
 		55EF7ABACC4360C9FEA3653F40783C7D /* Pods-HokoBlur-OC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HokoBlur-OC_Example.release.xcconfig"; sourceTree = "<group>"; };
-		584A249CC2BF2F4277BF6AC55AD905E2 /* HokoBlur-OC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HokoBlur-OC-umbrella.h"; sourceTree = "<group>"; };
-		5E95261BAEC4B21F2454258B80627B08 /* GaussianBlurFilter.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = GaussianBlurFilter.cpp; path = "HokoBlur-OC/Classes/Filter/GaussianBlurFilter.cpp"; sourceTree = "<group>"; };
-		61392AEB1D45F2A1AE1A75FE5CDE78F8 /* BlurUtil.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = BlurUtil.cpp; path = "HokoBlur-OC/Classes/Filter/BlurUtil.cpp"; sourceTree = "<group>"; };
 		63FE51AD578B9A711F02F1696D14B8C4 /* Pods-HokoBlur-OC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HokoBlur-OC_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		67B1FCAF531C0E1B32DDC6A2C64752B3 /* UIImage+PixelsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+PixelsData.m"; path = "HokoBlur-OC/Classes/SDK/UIImage+PixelsData.m"; sourceTree = "<group>"; };
+		6ACCC9AAF801AF3E1600FB7058C8D359 /* BlurUtil.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = BlurUtil.cpp; path = "HokoBlur-OC/Classes/Filter/BlurUtil.cpp"; sourceTree = "<group>"; };
+		6CF7AA34B17F5443054D941E67BE371C /* BoxBlurFilter.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = BoxBlurFilter.cpp; path = "HokoBlur-OC/Classes/Filter/BoxBlurFilter.cpp"; sourceTree = "<group>"; };
+		7023A031CA923627F4A5D17B1FFB3A10 /* HokoBlur-OC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "HokoBlur-OC.modulemap"; sourceTree = "<group>"; };
+		7B0BAA686ADABA4B25909A7091BBD383 /* GaussianBlurFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GaussianBlurFilter.h; path = "HokoBlur-OC/Classes/Filter/GaussianBlurFilter.h"; sourceTree = "<group>"; };
 		7D9EE8DDA8A3D84B86D2902E315955A8 /* Pods-HokoBlur-OC_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HokoBlur-OC_Tests-dummy.m"; sourceTree = "<group>"; };
-		7F2DD18F2B3A82F7FD7474D90ED3CD92 /* HokoBlur-OC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "HokoBlur-OC.modulemap"; sourceTree = "<group>"; };
-		89EEB35C3C798E94732B1624C5F9F6FC /* BlurFilter.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = BlurFilter.mm; path = "HokoBlur-OC/Classes/SDK/BlurFilter.mm"; sourceTree = "<group>"; };
+		811A7AA9FA59095D4A4251C05323AFD1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		9191F6FC76384B544F5E7B40E122C6ED /* Pods-HokoBlur-OC_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HokoBlur-OC_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		96FAA207212EB3E73C0A4F3EE3EE8F69 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		982AF6F733BC5C03E67CA0C445DA63BC /* UIImage+PixelsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+PixelsData.h"; path = "HokoBlur-OC/Classes/SDK/UIImage+PixelsData.h"; sourceTree = "<group>"; };
+		920AF3248228A1A0ABE3E87C69D443D1 /* HokoBlur-OC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HokoBlur-OC-umbrella.h"; sourceTree = "<group>"; };
+		989B0757EB463A9D9258F771FD2542C3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9C2E901CEBA4600DE951C42CFDC407DA /* UIImage+PixelsData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+PixelsData.m"; path = "HokoBlur-OC/Classes/SDK/UIImage+PixelsData.m"; sourceTree = "<group>"; };
 		A084C0B61F8D56E47CC7B738F6EBDF75 /* HokoBlur_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HokoBlur_OC.framework; path = "HokoBlur-OC.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A20BCF4AB5B395E422FCCB72F456461B /* BoxBlurFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BoxBlurFilter.h; path = "HokoBlur-OC/Classes/Filter/BoxBlurFilter.h"; sourceTree = "<group>"; };
 		ADD66E0FF8F29EF61E730FE5DEA43B1D /* Pods-HokoBlur-OC_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HokoBlur-OC_Example-dummy.m"; sourceTree = "<group>"; };
 		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C6ABF9BA63B259C756411F12D8937D31 /* HokoBlur-OC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HokoBlur-OC-prefix.pch"; sourceTree = "<group>"; };
+		B4042FFB5B3A4873B45BA7F674DEA661 /* StackBlurFilter.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = StackBlurFilter.cpp; path = "HokoBlur-OC/Classes/Filter/StackBlurFilter.cpp"; sourceTree = "<group>"; };
+		BA9DA46A5E3747481F58686B543A9479 /* DefaultBlurProcessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DefaultBlurProcessor.m; path = "HokoBlur-OC/Classes/SDK/DefaultBlurProcessor.m"; sourceTree = "<group>"; };
+		C2BBC5096E46721FBEBAF753946BB021 /* BoxBlurFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BoxBlurFilter.h; path = "HokoBlur-OC/Classes/Filter/BoxBlurFilter.h"; sourceTree = "<group>"; };
+		C7F4EA957BA90FD1DC950A7FC3DA230A /* AbstractBlurProcessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractBlurProcessor.h; path = "HokoBlur-OC/Classes/SDK/AbstractBlurProcessor.h"; sourceTree = "<group>"; };
+		C8E6EE56FBD3336AA8FDED95174F1001 /* BlurFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BlurFilter.h; path = "HokoBlur-OC/Classes/SDK/BlurFilter.h"; sourceTree = "<group>"; };
 		CA8968995A1E3B8BA066CD67A860485C /* Pods-HokoBlur-OC_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HokoBlur-OC_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CB066A1304CB140C5961575AC9C99883 /* Pods-HokoBlur-OC_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HokoBlur-OC_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D4FD604AB8FA6915EB6EFC0DFAEB4738 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D9DF74F04AE7F9EA1C9F8E876F929ADB /* DefaultBlurProcessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DefaultBlurProcessor.h; path = "HokoBlur-OC/Classes/SDK/DefaultBlurProcessor.h"; sourceTree = "<group>"; };
+		DBDDAB1D9C75B70D00DF571480ECF44C /* HokoBlur-OC.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "HokoBlur-OC.podspec.json"; sourceTree = "<group>"; };
 		DFB5AE32B25435655059F7FE97A55A8A /* Pods-HokoBlur-OC_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HokoBlur-OC_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		E056D538732B0C869DF6A3DB7BD6806C /* HokoBlur-OC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HokoBlur-OC-Info.plist"; sourceTree = "<group>"; };
 		E32F3986A611490A7F7E22CF90E4EF0E /* Pods-HokoBlur-OC_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HokoBlur-OC_Example-Info.plist"; sourceTree = "<group>"; };
-		EEE74643199F9E29AC83F749BE732983 /* BlurFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BlurFilter.h; path = "HokoBlur-OC/Classes/SDK/BlurFilter.h"; sourceTree = "<group>"; };
-		F41DA7C9822AA412B88BC8C4604367E4 /* GaussianBlurFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GaussianBlurFilter.h; path = "HokoBlur-OC/Classes/Filter/GaussianBlurFilter.h"; sourceTree = "<group>"; };
+		EC6E7E00D33B4DC0835F8F4197A57AB5 /* AbstractBlurProcessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractBlurProcessor.m; path = "HokoBlur-OC/Classes/SDK/AbstractBlurProcessor.m"; sourceTree = "<group>"; };
+		F073592850D82B7AFFFBC4C9B45AA325 /* HokoBlur-OC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HokoBlur-OC-Info.plist"; sourceTree = "<group>"; };
+		F9096731066C80F23344C14DBA36B398 /* HokoBlur-OC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HokoBlur-OC-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +112,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1BB6E82728C4F0CD2916D40062BAB6C1 /* Frameworks */ = {
+		3B7E9DFAA9534861552733CD271C96B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D66E7464E0B5C11B61914A0E390A447 /* Foundation.framework in Frameworks */,
+				A6308993272AD86CA2969F7B7DBB514C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,13 +131,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12B04EAE5B503877072F4350684B1D3A /* SDK */ = {
+		0D2BE2B067B794DE202706BDA99EF2A8 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				EEE74643199F9E29AC83F749BE732983 /* BlurFilter.h */,
-				89EEB35C3C798E94732B1624C5F9F6FC /* BlurFilter.mm */,
-				982AF6F733BC5C03E67CA0C445DA63BC /* UIImage+PixelsData.h */,
-				67B1FCAF531C0E1B32DDC6A2C64752B3 /* UIImage+PixelsData.m */,
+				DBDDAB1D9C75B70D00DF571480ECF44C /* HokoBlur-OC.podspec.json */,
+				811A7AA9FA59095D4A4251C05323AFD1 /* LICENSE */,
+				989B0757EB463A9D9258F771FD2542C3 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		3CCAB6DF9DB4BC09421C7DD7AA03B42C /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4EA957BA90FD1DC950A7FC3DA230A /* AbstractBlurProcessor.h */,
+				EC6E7E00D33B4DC0835F8F4197A57AB5 /* AbstractBlurProcessor.m */,
+				C8E6EE56FBD3336AA8FDED95174F1001 /* BlurFilter.h */,
+				1818B0B1E54DB1893D497FEF2F22C710 /* BlurFilter.mm */,
+				26F99A0AAAB9F8690EF6FEC5D01F7BC4 /* BlurProcessor.h */,
+				D9DF74F04AE7F9EA1C9F8E876F929ADB /* DefaultBlurProcessor.h */,
+				BA9DA46A5E3747481F58686B543A9479 /* DefaultBlurProcessor.m */,
+				319E64709EBA4ED63FD316A0536ADDE6 /* UIImage+PixelsData.h */,
+				9C2E901CEBA4600DE951C42CFDC407DA /* UIImage+PixelsData.m */,
 			);
 			name = SDK;
 			sourceTree = "<group>";
@@ -182,19 +207,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5E576D730F5EBD329251642C6DBFEB9E /* Filter */ = {
+		5E9D9B08C29D778517BFB03524D459FB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				61392AEB1D45F2A1AE1A75FE5CDE78F8 /* BlurUtil.cpp */,
-				064185212611847CA147D81222380BF4 /* BlurUtil.h */,
-				52934095ABCF47B5B31F76B96361C46B /* BoxBlurFilter.cpp */,
-				A20BCF4AB5B395E422FCCB72F456461B /* BoxBlurFilter.h */,
-				5E95261BAEC4B21F2454258B80627B08 /* GaussianBlurFilter.cpp */,
-				F41DA7C9822AA412B88BC8C4604367E4 /* GaussianBlurFilter.h */,
-				40A95D2370DDBCE7FEED2B37D3900D3A /* StackBlurFilter.cpp */,
-				2FE3CF5933F71136C037EC298E665DFE /* StackBlurFilter.h */,
+				7023A031CA923627F4A5D17B1FFB3A10 /* HokoBlur-OC.modulemap */,
+				3A5F5CA77DB01CF38DA11D0C7F00DA26 /* HokoBlur-OC.xcconfig */,
+				F9096731066C80F23344C14DBA36B398 /* HokoBlur-OC-dummy.m */,
+				F073592850D82B7AFFFBC4C9B45AA325 /* HokoBlur-OC-Info.plist */,
+				2CE15D63B4F88465DF9210F1E17621DA /* HokoBlur-OC-prefix.pch */,
+				920AF3248228A1A0ABE3E87C69D443D1 /* HokoBlur-OC-umbrella.h */,
 			);
-			name = Filter;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HokoBlur-OC";
 			sourceTree = "<group>";
 		};
 		709AC25EBC96EBBD70D947F757371D04 /* Products */ = {
@@ -218,10 +242,25 @@
 			);
 			sourceTree = "<group>";
 		};
+		8449042B67B200FFE07CB0CB0DB881F1 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				6ACCC9AAF801AF3E1600FB7058C8D359 /* BlurUtil.cpp */,
+				1743B083D1313D1DE1581FA37ADCA288 /* BlurUtil.h */,
+				6CF7AA34B17F5443054D941E67BE371C /* BoxBlurFilter.cpp */,
+				C2BBC5096E46721FBEBAF753946BB021 /* BoxBlurFilter.h */,
+				4C8E75F2E15E22E084F45DFE60FF801E /* GaussianBlurFilter.cpp */,
+				7B0BAA686ADABA4B25909A7091BBD383 /* GaussianBlurFilter.h */,
+				B4042FFB5B3A4873B45BA7F674DEA661 /* StackBlurFilter.cpp */,
+				142C00EC76C53C9C61FDF43675FD47AC /* StackBlurFilter.h */,
+			);
+			name = Filter;
+			sourceTree = "<group>";
+		};
 		B82E0AE2383D41799E24040E2C536C76 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D3672078AA358C63413D6D5351E22E3D /* HokoBlur-OC */,
+				F6C637FA47B612031264B43D8B1BFE5E /* HokoBlur-OC */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -234,40 +273,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BD990C880ED87E88AE470581DEAE4B04 /* Pod */ = {
+		F6C637FA47B612031264B43D8B1BFE5E /* HokoBlur-OC */ = {
 			isa = PBXGroup;
 			children = (
-				4D1428781DAB7587908FA413D60C3B80 /* HokoBlur-OC.podspec.json */,
-				96FAA207212EB3E73C0A4F3EE3EE8F69 /* LICENSE */,
-				D4FD604AB8FA6915EB6EFC0DFAEB4738 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		D3672078AA358C63413D6D5351E22E3D /* HokoBlur-OC */ = {
-			isa = PBXGroup;
-			children = (
-				5E576D730F5EBD329251642C6DBFEB9E /* Filter */,
-				BD990C880ED87E88AE470581DEAE4B04 /* Pod */,
-				12B04EAE5B503877072F4350684B1D3A /* SDK */,
-				DBC84E55DDCFE3061211C5E0B6982F8E /* Support Files */,
+				8449042B67B200FFE07CB0CB0DB881F1 /* Filter */,
+				0D2BE2B067B794DE202706BDA99EF2A8 /* Pod */,
+				3CCAB6DF9DB4BC09421C7DD7AA03B42C /* SDK */,
+				5E9D9B08C29D778517BFB03524D459FB /* Support Files */,
 			);
 			name = "HokoBlur-OC";
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		DBC84E55DDCFE3061211C5E0B6982F8E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7F2DD18F2B3A82F7FD7474D90ED3CD92 /* HokoBlur-OC.modulemap */,
-				3583914EDC65D9D2B7489D9BE569B3FF /* HokoBlur-OC.xcconfig */,
-				0EC02681B6D1778A048DCAD764567461 /* HokoBlur-OC-dummy.m */,
-				E056D538732B0C869DF6A3DB7BD6806C /* HokoBlur-OC-Info.plist */,
-				C6ABF9BA63B259C756411F12D8937D31 /* HokoBlur-OC-prefix.pch */,
-				584A249CC2BF2F4277BF6AC55AD905E2 /* HokoBlur-OC-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/HokoBlur-OC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,20 +296,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BC0D5F9AD17BBBF92D9E92D9239A3811 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C2AC57A34EE50567779933A7487C340 /* BlurFilter.h in Headers */,
-				D088D9AE639899F59D7832F4F01D763C /* BlurUtil.h in Headers */,
-				B30C5858696F2D01CDC561050FFC0345 /* BoxBlurFilter.h in Headers */,
-				7BCCB1D2406529839581D27EEFD17968 /* GaussianBlurFilter.h in Headers */,
-				DC8E2E628961DA61AA1D0AF87F6CA639 /* HokoBlur-OC-umbrella.h in Headers */,
-				FAC8C17E5A63D5394F1347AC889A85BD /* StackBlurFilter.h in Headers */,
-				0ABC65498AD4F6331ABC496BDDDA67F1 /* UIImage+PixelsData.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D327F1D34D815ADF865A2C42BFF14576 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -303,9 +304,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1A1B77CDB4620E4EBF215CC6F54B797 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				367951A8D33882EFD2BB3E4EDB94048F /* AbstractBlurProcessor.h in Headers */,
+				886FD21E32B70A714CEC2D2C219382B8 /* BlurFilter.h in Headers */,
+				BD085C653F95E7BD03E0E7C8D98A5246 /* BlurProcessor.h in Headers */,
+				CA14749FE7F9104B0AE15C6D25304E6F /* BlurUtil.h in Headers */,
+				355F6BDC4810F2BD02B646138950D98D /* BoxBlurFilter.h in Headers */,
+				D2E62D9A69EBE6F1B4F93406419F2862 /* DefaultBlurProcessor.h in Headers */,
+				CDB0F32F49A6A9E06F34F9DD08656983 /* GaussianBlurFilter.h in Headers */,
+				CD55695BD0A432E0A5894A78A9B271C4 /* HokoBlur-OC-umbrella.h in Headers */,
+				63FADC44845F8CB951F5C02C95A495E1 /* StackBlurFilter.h in Headers */,
+				B9336B6FBB3FC805F4418F029840F15D /* UIImage+PixelsData.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0B041BF786DE7CA01E9A8D7FAAEA7529 /* HokoBlur-OC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCFC7AF7CEFA359C9BE1EA87C09F0CE0 /* Build configuration list for PBXNativeTarget "HokoBlur-OC" */;
+			buildPhases = (
+				F1A1B77CDB4620E4EBF215CC6F54B797 /* Headers */,
+				A7F7DBFBCF7C6A55826C3DE43555EF9A /* Sources */,
+				3B7E9DFAA9534861552733CD271C96B6 /* Frameworks */,
+				B7B3D2DCA33E5C9E8FC4203406EDCB90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HokoBlur-OC";
+			productName = "HokoBlur-OC";
+			productReference = A084C0B61F8D56E47CC7B738F6EBDF75 /* HokoBlur_OC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		4206A7F952077BBC91D1768BF4BCF46C /* Pods-HokoBlur-OC_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8611880ECA1C15572C0EA162543DBA01 /* Build configuration list for PBXNativeTarget "Pods-HokoBlur-OC_Example" */;
@@ -323,24 +359,6 @@
 			name = "Pods-HokoBlur-OC_Example";
 			productName = "Pods-HokoBlur-OC_Example";
 			productReference = 4F81D24F149F04D39B76F4F135AA3011 /* Pods_HokoBlur_OC_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D6EACA403AE9884AF174AD0A7EACA50B /* HokoBlur-OC */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C0B9219AEC0554FABFFA249B53A90B79 /* Build configuration list for PBXNativeTarget "HokoBlur-OC" */;
-			buildPhases = (
-				BC0D5F9AD17BBBF92D9E92D9239A3811 /* Headers */,
-				B921333CB02B06DC92C90A48CE8108CD /* Sources */,
-				1BB6E82728C4F0CD2916D40062BAB6C1 /* Frameworks */,
-				E6841CACDF0518C83D98F7D4DF4290EB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "HokoBlur-OC";
-			productName = "HokoBlur-OC";
-			productReference = A084C0B61F8D56E47CC7B738F6EBDF75 /* HokoBlur_OC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F32D9A71B59D162923E0F8B8C3EA64D5 /* Pods-HokoBlur-OC_Tests */ = {
@@ -383,7 +401,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D6EACA403AE9884AF174AD0A7EACA50B /* HokoBlur-OC */,
+				0B041BF786DE7CA01E9A8D7FAAEA7529 /* HokoBlur-OC */,
 				4206A7F952077BBC91D1768BF4BCF46C /* Pods-HokoBlur-OC_Example */,
 				F32D9A71B59D162923E0F8B8C3EA64D5 /* Pods-HokoBlur-OC_Tests */,
 			);
@@ -398,7 +416,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6841CACDF0518C83D98F7D4DF4290EB /* Resources */ = {
+		B7B3D2DCA33E5C9E8FC4203406EDCB90 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -423,25 +441,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A7F7DBFBCF7C6A55826C3DE43555EF9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4407F095B11EDE80066ED21FC0CCA9EE /* AbstractBlurProcessor.m in Sources */,
+				7CD2C281B5E9B6887647F4C553919454 /* BlurFilter.mm in Sources */,
+				A6EF33E169967DD29247B0233212C2C6 /* BlurUtil.cpp in Sources */,
+				2A5CAC7E357DE3737DC1D29B0E89BE44 /* BoxBlurFilter.cpp in Sources */,
+				92770541553B7375E326F97DB143CF2E /* DefaultBlurProcessor.m in Sources */,
+				C23832D9E66C17BD2E6B0A0321E56EE0 /* GaussianBlurFilter.cpp in Sources */,
+				E64F8FF919E8A6C7C0E6DB2AF616A560 /* HokoBlur-OC-dummy.m in Sources */,
+				0687392D8C00B6DB6C8FA85321CA446D /* StackBlurFilter.cpp in Sources */,
+				E6B3F73D118997CAE36795169E555C62 /* UIImage+PixelsData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AB516C6A61C8E84B6CB97DEB3ED20354 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				019DFA06BF72021AB9CF1A24F63A996F /* Pods-HokoBlur-OC_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B921333CB02B06DC92C90A48CE8108CD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E5E665FCA6105B8E54128A057B4E67F5 /* BlurFilter.mm in Sources */,
-				B5198C537C9B5C12ADBCD1C699DB354F /* BlurUtil.cpp in Sources */,
-				DFBFB1571ADA39662B0CF9492A710DF9 /* BoxBlurFilter.cpp in Sources */,
-				AB798D27D431164593008220A9562CC0 /* GaussianBlurFilter.cpp in Sources */,
-				23FCCD4AB2988B3B4A044C4F841234C8 /* HokoBlur-OC-dummy.m in Sources */,
-				B5330B686152AF92F01C68C4D138BD5C /* StackBlurFilter.cpp in Sources */,
-				BD64A924C81A8766F904E92DD897B0D6 /* UIImage+PixelsData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +471,7 @@
 		5A8C24814709032309A6CD685AD93F3B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "HokoBlur-OC";
-			target = D6EACA403AE9884AF174AD0A7EACA50B /* HokoBlur-OC */;
+			target = 0B041BF786DE7CA01E9A8D7FAAEA7529 /* HokoBlur-OC */;
 			targetProxy = AD4455EC994943FBDD11482419ECCAC3 /* PBXContainerItemProxy */;
 		};
 		71816048C4D89ED53A7398F71425ACFE /* PBXTargetDependency */ = {
@@ -557,36 +577,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		54519F2D83B744C2E8ED79420413E51E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3583914EDC65D9D2B7489D9BE569B3FF /* HokoBlur-OC.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HokoBlur-OC/HokoBlur-OC-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HokoBlur-OC/HokoBlur-OC-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HokoBlur-OC/HokoBlur-OC.modulemap";
-				PRODUCT_MODULE_NAME = HokoBlur_OC;
-				PRODUCT_NAME = HokoBlur_OC;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -717,37 +707,6 @@
 			};
 			name = Release;
 		};
-		CB9D016429F6C997EDDC8F097F7B77EC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3583914EDC65D9D2B7489D9BE569B3FF /* HokoBlur-OC.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HokoBlur-OC/HokoBlur-OC-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HokoBlur-OC/HokoBlur-OC-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HokoBlur-OC/HokoBlur-OC.modulemap";
-				PRODUCT_MODULE_NAME = HokoBlur_OC;
-				PRODUCT_NAME = HokoBlur_OC;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		D90A9BBCDFADC07308604BBDE0172DA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 55EF7ABACC4360C9FEA3653F40783C7D /* Pods-HokoBlur-OC_Example.release.xcconfig */;
@@ -782,6 +741,67 @@
 			};
 			name = Release;
 		};
+		ECE6E3B0AA035307542239FE57ADF208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A5F5CA77DB01CF38DA11D0C7F00DA26 /* HokoBlur-OC.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HokoBlur-OC/HokoBlur-OC-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HokoBlur-OC/HokoBlur-OC-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HokoBlur-OC/HokoBlur-OC.modulemap";
+				PRODUCT_MODULE_NAME = HokoBlur_OC;
+				PRODUCT_NAME = HokoBlur_OC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FE5C39CE5E270ED037E53B81884A1CEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A5F5CA77DB01CF38DA11D0C7F00DA26 /* HokoBlur-OC.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HokoBlur-OC/HokoBlur-OC-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HokoBlur-OC/HokoBlur-OC-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HokoBlur-OC/HokoBlur-OC.modulemap";
+				PRODUCT_MODULE_NAME = HokoBlur_OC;
+				PRODUCT_NAME = HokoBlur_OC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -812,11 +832,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0B9219AEC0554FABFFA249B53A90B79 /* Build configuration list for PBXNativeTarget "HokoBlur-OC" */ = {
+		BCFC7AF7CEFA359C9BE1EA87C09F0CE0 /* Build configuration list for PBXNativeTarget "HokoBlur-OC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				54519F2D83B744C2E8ED79420413E51E /* Debug */,
-				CB9D016429F6C997EDDC8F097F7B77EC /* Release */,
+				FE5C39CE5E270ED037E53B81884A1CEF /* Debug */,
+				ECE6E3B0AA035307542239FE57ADF208 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

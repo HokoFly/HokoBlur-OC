@@ -7,8 +7,8 @@
 //
 
 #import "HokoBlurViewController.h"
-#import "UIImage+PixelsData.h"
-#import "BlurFilter.h"
+#import "DefaultBlurProcessor.h"
+
 
 @interface HokoBlurViewController ()
 @property(strong, nonatomic) IBOutlet UIImageView *imageView;
@@ -25,42 +25,16 @@
         UIImage *image = [UIImage imageNamed:@"sample1"];
         [self setImage:image];
 
-        CGFloat w = image.size.width * image.scale;
-        CGFloat h = image.size.height * image.scale;
-        CGFloat sampleFactor = 5.0;
-        NSUInteger scaleW = (NSUInteger) (w / sampleFactor);
-        NSUInteger scaleH = (NSUInteger) (h / sampleFactor);
+        id<BlurProcessor> blurProcessor = [[DefaultBlurProcessor alloc] init];
+        UIImage *blurred = [blurProcessor blur:image];
 
-        UIImage *scaleImage = [self resizeImage:image toSize:CGSizeMake(scaleW, scaleH)];
-
-        NSData *data = [scaleImage toPixelsData];
-
-        NSData *result = [BlurFilter blur:data radius:10 width:scaleW height:scaleH];
-        UIImage *blurredImage = [UIImage fromPixelsData:result width:scaleW height:scaleH];
-
-        UIImage *upscaleImage = [self resizeImage:blurredImage toSize:CGSizeMake(scaleW, scaleH)];
-
-        [self setImage:upscaleImage];
+        [self setImage:blurred];
 
     });
 
 
 }
 
-
-- (UIImage *)resizeImage:(UIImage *)originImage toSize:(CGSize)scaledSize {
-
-    UIGraphicsBeginImageContext(scaledSize);
-    CGContextRef  context = UIGraphicsGetCurrentContext();
-    CGContextTranslateCTM(context, 0.0, scaledSize.height);
-    CGContextScaleCTM(context, 1.0, -1.0);
-    CGContextDrawImage(context, CGRectMake(0.0f, 0.0f, scaledSize.width, scaledSize.height), originImage.CGImage);
-
-    UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
-
-    UIGraphicsEndImageContext();
-    return resizedImage;
-}
 
 
 - (void)setImage:(UIImage *)image {
