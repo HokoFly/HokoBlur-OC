@@ -26,7 +26,7 @@
 @property(nonatomic, assign) BOOL needUpscale;
 @property(nonatomic, copy, readonly) UIImage * (^blur)(UIImage *);
 
-- (NSData *)blurWithData:(NSData *)data width:(NSInteger)w height:(NSInteger)h;
+- (NSData *)blurWithData:(NSData *)data width:(NSInteger)w height:(NSInteger)h inParallel:(BOOL)parallel;
 
 - (instancetype)init;
 - (instancetype)initWithBuilder:(BlurProcessorBuilder *)builder;

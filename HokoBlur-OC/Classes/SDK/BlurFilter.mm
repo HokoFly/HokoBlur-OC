@@ -12,27 +12,30 @@
 
 }
 
-+ (NSData *)blur:(NSData *)data mode:(BlurMode)mode radius:(NSInteger)r width:(NSInteger)w height:(NSInteger)h {
++ (NSData *)blur:(NSData *)data mode:(BlurMode)mode radius:(NSInteger)r width:(NSInteger)w height:(NSInteger)h cores:(NSInteger)cores index:(NSInteger)index direction:(hokoblur::Direction)direction {
     uint32_t *pixels = (uint32_t *) [data bytes];
 
     switch (mode) {
         case BLUR_MODE_BOX:
-            boxBlur(pixels, r, 1, 0, hokoblur::HORIZONTAL, (int) w, (int) h);
-            boxBlur(pixels, r, 1, 0, hokoblur::VERTICAL, (int) w, (int) h);
+            boxBlur(pixels, r, cores, index, direction, (int) w, (int) h);
             break;
         case BLUR_MODE_STACK:
-            stackBlur(pixels, r, 1, 0, hokoblur::HORIZONTAL, (int) w, (int) h);
-            stackBlur(pixels, r, 1, 0, hokoblur::VERTICAL, (int) w, (int) h);
+            stackBlur(pixels, r, cores, index, direction, (int) w, (int) h);
             break;
         case BLUR_MODE_GAUSSIAN:
-            gaussianBlur(pixels, r, 1, 0, hokoblur::HORIZONTAL, (int) w, (int) h);
-            gaussianBlur(pixels, r, 1, 0, hokoblur::VERTICAL, (int) w, (int) h);
+            gaussianBlur(pixels, r, cores, index, direction, (int) w, (int) h);
             break;
     }
 
     NSData *result = [NSData dataWithBytes:pixels length:data.length];
 
     return result;
+}
+
++ (NSData *)blurInSingleBlock:(NSData *)data mode:(BlurMode)mode radius:(NSInteger)r width:(NSInteger)w height:(NSInteger)h {
+    [BlurFilter blur:data mode:mode radius:r width:w height:h cores:1 index:0 direction:hokoblur::HORIZONTAL];
+    [BlurFilter blur:data mode:mode radius:r width:w height:h cores:1 index:0 direction:hokoblur::VERTICAL];
+    return data;
 }
 
 @end
