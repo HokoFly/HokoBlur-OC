@@ -28,36 +28,38 @@
 
 }
 
+- (UIImage *(^)(UIImage *))blur {
+    return ^UIImage *(UIImage *image) {
+        NSLog(@"%@", [self description]);
+        [self checkParameters];
 
-- (UIImage *)blur:(UIImage *)image {
-    [self checkParameters];
+        CGFloat w = image.size.width * image.scale;
+        CGFloat h = image.size.height * image.scale;
+        CGFloat sampleFactor = [self sampleFactor];
 
-    CGFloat w = image.size.width * image.scale;
-    CGFloat h = image.size.height * image.scale;
-    CGFloat sampleFactor = [self sampleFactor];
+        NSUInteger scaleW = (NSUInteger) (w / sampleFactor);
+        NSUInteger scaleH = (NSUInteger) (h / sampleFactor);
 
-    NSUInteger scaleW = (NSUInteger) (w / sampleFactor);
-    NSUInteger scaleH = (NSUInteger) (h / sampleFactor);
+        UIImage *inImage = image;
+        if (self.forceCopy) {
+            inImage = [UIImage imageWithCGImage:image.CGImage];
+        }
 
-    UIImage *inImage = image;
-    if (self.forceCopy) {
-        inImage = [UIImage imageWithCGImage:image.CGImage];
-    }
+        UIImage *scaleImage = [self resizeImage:inImage toSize:CGSizeMake(scaleW, scaleH)];
 
-    UIImage *scaleImage = [self resizeImage:inImage toSize:CGSizeMake(scaleW, scaleH)];
+        NSData *data = [scaleImage toPixelsData];
 
-    NSData *data = [scaleImage toPixelsData];
+        NSData *result = [self blurWithData:data width:scaleW height:scaleH];
 
-    NSData *result = [self blurWithData:data width:scaleW height:scaleH];
+        UIImage *blurredImage = [UIImage fromPixelsData:result width:scaleW height:scaleH];
 
-    UIImage *blurredImage = [UIImage fromPixelsData:result width:scaleW height:scaleH];
+        UIImage *outImage = blurredImage;
+        if (self.needUpscale) {
+            outImage = [self resizeImage:blurredImage toSize:CGSizeMake(scaleW, scaleH)];
+        }
 
-    UIImage *upscaleImage = blurredImage;
-    if (self.needUpscale) {
-        upscaleImage = [self resizeImage:blurredImage toSize:CGSizeMake(scaleW, scaleH)];
-    }
-
-    return upscaleImage;
+        return outImage;
+    };
 }
 
 - (void)checkParameters {
@@ -129,6 +131,17 @@
     builder.forceCopy = self.forceCopy;
     builder.needUpscale = self.needUpscale;
     return builder;
+}
+
+- (NSString *)description {
+    NSMutableString *description = [NSMutableString stringWithFormat:@"<%@: ", NSStringFromClass([self class])];
+    [description appendFormat:@"self.mode=%d", self.mode];
+    [description appendFormat:@", self.radius=%i", self.radius];
+    [description appendFormat:@", self.sampleFactor=%f", self.sampleFactor];
+    [description appendFormat:@", self.forceCopy=%d", self.forceCopy];
+    [description appendFormat:@", self.needUpscale=%d", self.needUpscale];
+    [description appendString:@">"];
+    return description;
 }
 
 

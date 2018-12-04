@@ -14,7 +14,8 @@
 @property(nonatomic, assign) CGFloat sampleFactor;
 @property(nonatomic, assign) BOOL forceCopy;
 @property(nonatomic, assign) BOOL needUpscale;
+@property(nonatomic, copy, readonly) UIImage * (^blur)(UIImage *);
 
-- (UIImage *) blur:(UIImage *)image;
+//- (UIImage *) blur:(UIImage *)image;
 
 @end

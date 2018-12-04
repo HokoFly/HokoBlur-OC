@@ -8,6 +8,7 @@
 
 #import "HokoBlurViewController.h"
 #import "DefaultBlurProcessor.h"
+#import "HokoBlur.h"
 
 
 @interface HokoBlurViewController ()
@@ -24,10 +25,11 @@
     dispatch_async(blurQueue, ^{
         UIImage *image = [UIImage imageNamed:@"sample1"];
         [self setImage:image];
-
-        id<BlurProcessor> blurProcessor = [[DefaultBlurProcessor alloc] init];
-        UIImage *blurred = [blurProcessor blur:image];
-
+        UIImage *blurred = HokoBlur.mode(BLUR_MODE_STACK)
+                .radius(10)
+                .sampleFactor(5.0f)
+                .processor()
+                .blur(image);
         [self setImage:blurred];
 
     });

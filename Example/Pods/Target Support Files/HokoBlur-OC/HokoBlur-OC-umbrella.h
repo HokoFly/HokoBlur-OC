@@ -19,6 +19,7 @@
 #import "BlurMode.h"
 #import "BlurProcessor.h"
 #import "DefaultBlurProcessor.h"
+#import "HokoBlur.h"
 #import "UIImage+PixelsData.h"
 
 FOUNDATION_EXPORT double HokoBlur_OCVersionNumber;

@@ -3,10 +3,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BlurMode.h"
 
 
 @interface BlurFilter : NSObject
 
-+ (NSData *)blur:(NSData *)pixels radius:(NSInteger)r width:(NSInteger)w height:(NSInteger)h;
++ (NSData *)blur:(NSData *)pixels mode:(BlurMode)mode radius:(NSInteger)r width:(NSInteger)w height:(NSInteger)h;
 
 @end
