@@ -115,6 +115,7 @@
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				18833FAC2B7B3A4A2F993251 /* Pods */,
+				84A31C9B5B6B672A0446838D /* HokoBlurChainImpl.m */,
 			);
 			sourceTree = "<group>";
 		};

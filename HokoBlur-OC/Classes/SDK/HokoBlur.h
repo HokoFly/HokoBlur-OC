@@ -8,18 +8,24 @@
 @protocol BlurProcessor;
 @class BlurProcessorBuilder;
 
-#define HokoBlur ([EasyHokoBlur instance])
+#define HokoBlur ([[EasyHokoBlur instance] scheme])
+
+
+@protocol HokoBlurChain <NSObject>
+@property(nonatomic, copy, readonly) id <HokoBlurChain> (^mode)(BlurMode mode);
+@property(nonatomic, copy, readonly) id <HokoBlurChain> (^radius)(NSInteger radius);
+@property(nonatomic, copy, readonly) id <HokoBlurChain> (^sampleFactor)(CGFloat sampleFactor);
+@property(nonatomic, copy, readonly) id <HokoBlurChain> (^forceCopy)(BOOL forceCopy);
+@property(nonatomic, copy, readonly) id <HokoBlurChain> (^needUpscale)(BOOL needUpscale);
+@property(nonatomic, copy, readonly) id <BlurProcessor> (^processor)(void);
+@end
+
 
 @interface EasyHokoBlur : NSObject
 
-@property(nonatomic, strong) BlurProcessorBuilder *builder;
-@property(nonatomic, copy, readonly) EasyHokoBlur * (^mode)(BlurMode mode);
-@property(nonatomic, copy, readonly) EasyHokoBlur * (^radius)(NSInteger radius);
-@property(nonatomic, copy, readonly) EasyHokoBlur * (^sampleFactor)(CGFloat sampleFactor);
-@property(nonatomic, copy, readonly) EasyHokoBlur * (^forceCopy)(BOOL forceCopy);
-@property(nonatomic, copy, readonly) EasyHokoBlur * (^needUpscale)(BOOL needUpscale);
-@property(nonatomic, copy, readonly) id<BlurProcessor> (^processor)(void);
++ (instancetype)instance;
 
-+(instancetype)instance;
+//reserve for multiple blur schemes
+- (id<HokoBlurChain>)scheme;
 
 @end

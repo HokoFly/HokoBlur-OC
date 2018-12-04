@@ -8,6 +8,71 @@
 #import "DefaultBlurProcessor.h"
 
 
+@interface HokoBlurChainImpl : NSObject <HokoBlurChain>
+@property(nonatomic, strong) BlurProcessorBuilder *builder;
+
+@end
+
+
+@implementation HokoBlurChainImpl
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.builder = [[BlurProcessorBuilder alloc] init];
+    }
+
+    return self;
+}
+
+
+- (id <HokoBlurChain> (^)(BlurMode))mode {
+    return ^id <HokoBlurChain> (BlurMode mode) {
+        self.builder.mode = mode;
+        return self;
+    };
+}
+
+- (id <HokoBlurChain> (^)(NSInteger))radius {
+    return ^id <HokoBlurChain> (NSInteger radius) {
+        self.builder.radius = radius;
+        return self;
+    };
+}
+
+- (id <HokoBlurChain> (^)(CGFloat))sampleFactor {
+    return ^id <HokoBlurChain> (CGFloat sampleFactor) {
+        self.builder.sampleFactor = sampleFactor;
+        return self;
+    };
+}
+
+- (id <HokoBlurChain> (^)(BOOL))forceCopy {
+    return ^id <HokoBlurChain> (BOOL forceCopy) {
+        self.builder.forceCopy = forceCopy;
+        return self;
+    };
+}
+
+- (id <HokoBlurChain> (^)(BOOL))needUpscale {
+    return ^id <HokoBlurChain> (BOOL needUpscale) {
+        self.builder.needUpscale = needUpscale;
+        return self;
+    };
+}
+
+
+- (id <BlurProcessor> (^)(void))processor {
+    return ^id <BlurProcessor> {
+        id <BlurProcessor> blurProcessor = [[DefaultBlurProcessor alloc] initWithBuilder:self.builder];
+        return blurProcessor;
+    };
+}
+
+@end
+
+
+
 @implementation EasyHokoBlur {
 
 }
@@ -19,60 +84,11 @@
         sInstance = [[EasyHokoBlur alloc] init];
     });
 
-    sInstance.builder = [[BlurProcessorBuilder alloc] init];
     return sInstance;
 }
 
-//- (instancetype)init {
-//    self = [super init];
-//    if (self) {
-//        self.builder = [[BlurProcessorBuilder alloc] init];
-//    }
-//
-//    return self;
-//}
-
-
-- (EasyHokoBlur *(^)(BlurMode))mode {
-    return ^EasyHokoBlur *(BlurMode mode) {
-        self.builder.mode = mode;
-        return self;
-    };
-}
-
-- (EasyHokoBlur *(^)(NSInteger))radius {
-    return ^EasyHokoBlur *(NSInteger radius) {
-        self.builder.radius = radius;
-        return self;
-    };
-}
-
-- (EasyHokoBlur *(^)(CGFloat))sampleFactor {
-    return ^EasyHokoBlur *(CGFloat sampleFactor) {
-        self.builder.sampleFactor = sampleFactor;
-        return self;
-    };
-}
-
-- (EasyHokoBlur *(^)(BOOL))forceCopy {
-    return ^EasyHokoBlur *(BOOL forceCopy) {
-        self.builder.forceCopy = forceCopy;
-        return self;
-    };
-}
-
-- (EasyHokoBlur *(^)(BOOL))needUpscale {
-    return ^EasyHokoBlur *(BOOL needUpscale) {
-        self.builder.needUpscale = needUpscale;
-        return self;
-    };
-}
-
-- (id <BlurProcessor> (^)(void))processor {
-    return ^id <BlurProcessor> {
-        id <BlurProcessor> blurProcessor = [[DefaultBlurProcessor alloc] initWithBuilder:self.builder];
-        return blurProcessor;
-    };
+- (id<HokoBlurChain>)scheme {
+    return [[HokoBlurChainImpl alloc] init];
 }
 
 
