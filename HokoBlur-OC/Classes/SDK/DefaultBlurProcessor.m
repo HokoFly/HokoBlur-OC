@@ -12,7 +12,7 @@
 
 }
 - (NSData *)blurWithData:(NSData *)data width:(NSInteger)w height:(NSInteger)h {
-    NSData *result = [BlurFilter blur:data radius:10 width:w height:h];
+    NSData *result = [BlurFilter blur:data radius:self.radius width:w height:h];
     return result;
 }
 

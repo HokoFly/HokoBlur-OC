@@ -16,6 +16,7 @@
 #import "StackBlurFilter.h"
 #import "AbstractBlurProcessor.h"
 #import "BlurFilter.h"
+#import "BlurMode.h"
 #import "BlurProcessor.h"
 #import "DefaultBlurProcessor.h"
 #import "UIImage+PixelsData.h"

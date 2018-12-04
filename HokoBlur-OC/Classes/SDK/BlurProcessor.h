@@ -3,12 +3,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BlurMode.h"
 
 @protocol BlurProcessor <NSObject>
 
 @required
 
-- (UIImage *) blur:(UIImage *)image;
+@property(nonatomic, assign) BlurMode mode;
+@property(nonatomic, assign) NSInteger radius;
+@property(nonatomic, assign) CGFloat sampleFactor;
+@property(nonatomic, assign) BOOL forceCopy;
+@property(nonatomic, assign) BOOL needUpscale;
 
+- (UIImage *) blur:(UIImage *)image;
 
 @end
