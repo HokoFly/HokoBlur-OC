@@ -33,6 +33,4 @@
 + (instancetype)makeWithBuilder:(void (^)(BlurProcessorBuilder *))updateBlock;
 - (instancetype)update:(void (^)(BlurProcessorBuilder *))updateBlock;
 
-- (NSString *)description;
-
 @end

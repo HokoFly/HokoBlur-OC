@@ -12,7 +12,7 @@
 
 }
 
-+ (NSData *)blur:(NSData *)data mode:(BlurMode)mode radius:(NSInteger)r width:(NSInteger)w height:(NSInteger)h cores:(NSInteger)cores index:(NSInteger)index direction:(hokoblur::Direction)direction {
++ (NSData *)blur:(NSData *)data mode:(BlurMode)mode radius:(NSInteger)r width:(NSInteger)w height:(NSInteger)h cores:(NSInteger)cores index:(NSInteger)index direction:(BlurDirection)direction {
     uint32_t *pixels = (uint32_t *) [data bytes];
 
     switch (mode) {
@@ -33,8 +33,8 @@
 }
 
 + (NSData *)blurInSingleBlock:(NSData *)data mode:(BlurMode)mode radius:(NSInteger)r width:(NSInteger)w height:(NSInteger)h {
-    [BlurFilter blur:data mode:mode radius:r width:w height:h cores:1 index:0 direction:hokoblur::HORIZONTAL];
-    [BlurFilter blur:data mode:mode radius:r width:w height:h cores:1 index:0 direction:hokoblur::VERTICAL];
+    [BlurFilter blur:data mode:mode radius:r width:w height:h cores:1 index:0 direction:DIRECTION_HORIZONTAL];
+    [BlurFilter blur:data mode:mode radius:r width:w height:h cores:1 index:0 direction:DIRECTION_VERTICAL];
     return data;
 }
 

@@ -3,7 +3,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BlurMode.h"
+#import "BlurEnum.h"
 
 @protocol BlurProcessor;
 @class BlurProcessorBuilder;

@@ -3,13 +3,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BlurMode.h"
-#import "BlurUtil.h"
+#import "BlurEnum.h"
 
 
 @interface BlurFilter : NSObject
 
-+ (NSData *)blur:(NSData *)data mode:(BlurMode)mode radius:(NSInteger)r width:(NSInteger)w height:(NSInteger)h cores:(NSInteger)cores index:(NSInteger)index direction:(hokoblur::Direction)direction;
++ (NSData *)blur:(NSData *)data mode:(BlurMode)mode radius:(NSInteger)r width:(NSInteger)w height:(NSInteger)h cores:(NSInteger)cores index:(NSInteger)index direction:(BlurDirection)direction;
 + (NSData *)blurInSingleBlock:(NSData *)data mode:(BlurMode)mode radius:(NSInteger)r width:(NSInteger)w height:(NSInteger)h;
 
 @end

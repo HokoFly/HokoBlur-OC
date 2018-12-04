@@ -16,7 +16,7 @@
 #import "StackBlurFilter.h"
 #import "AbstractBlurProcessor.h"
 #import "BlurFilter.h"
-#import "BlurMode.h"
+#import "BlurEnum.h"
 #import "BlurProcessor.h"
 #import "DefaultBlurProcessor.h"
 #import "HokoBlur.h"

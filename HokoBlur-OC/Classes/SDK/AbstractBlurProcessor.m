@@ -136,16 +136,5 @@
     return builder;
 }
 
-- (NSString *)description {
-    NSMutableString *description = [NSMutableString stringWithFormat:@"<%@: ", NSStringFromClass([self class])];
-    [description appendFormat:@"self.mode=%d", self.mode];
-    [description appendFormat:@", self.radius=%i", self.radius];
-    [description appendFormat:@", self.sampleFactor=%f", self.sampleFactor];
-    [description appendFormat:@", self.forceCopy=%d", self.forceCopy];
-    [description appendFormat:@", self.needUpscale=%d", self.needUpscale];
-    [description appendString:@">"];
-    return description;
-}
-
 
 @end
