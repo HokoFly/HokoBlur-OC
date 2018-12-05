@@ -19,6 +19,5 @@
 
 @end
 
-static id<BlurResultDispatcher> mainThreadDispatcher() {
-    return [[BlurResultDispatcherImpl alloc] initWithDispatchQueue:dispatch_get_main_queue()];
-}
+id<BlurResultDispatcher> mainThreadDispatcher(void);
+
