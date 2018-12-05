@@ -72,7 +72,7 @@
 
 - (void (^)(UIImage *, BlurCompletionHandler))asyncBlur {
     return ^(UIImage *image, BlurCompletionHandler completionHandler) {
-        id<RunnableTask> task = [AsyncBlurTask taskWithDelegate:completionHandler processor:self image:image];
+        id <RunnableTask> task = [AsyncBlurTask taskWithDelegate:completionHandler processor:self image:image];
         [[BlurTaskManager instance] submit:task];
     };
 }
@@ -90,7 +90,7 @@
 - (UIImage *)resizeImage:(UIImage *)originImage toSize:(CGSize)scaledSize {
 
     UIGraphicsBeginImageContext(scaledSize);
-    CGContextRef  context = UIGraphicsGetCurrentContext();
+    CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextTranslateCTM(context, 0, scaledSize.height);
     CGContextScaleCTM(context, 1.0f, -1.0f);
     CGContextDrawImage(context, CGRectMake(0, 0, scaledSize.width, scaledSize.height), originImage.CGImage);
@@ -109,8 +109,6 @@
     BlurProcessorBuilder *builder = [[BlurProcessorBuilder alloc] init];
     return [self initWithBuilder:builder];
 }
-
-
 
 
 - (instancetype)initWithBuilder:(BlurProcessorBuilder *)builder {

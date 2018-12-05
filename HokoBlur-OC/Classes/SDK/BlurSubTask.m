@@ -10,7 +10,7 @@
 
 }
 
-- (instancetype)initWithMode:(BlurMode)mode radius:(NSInteger)radius cores:(NSInteger)cores index:(NSInteger)index pixelData:(NSData *)pixelData width:(NSInteger)w height:(NSInteger)h direction:(BlurDirection) direction {
+- (instancetype)initWithMode:(BlurMode)mode radius:(NSInteger)radius cores:(NSInteger)cores index:(NSInteger)index pixelData:(NSData *)pixelData width:(NSInteger)w height:(NSInteger)h direction:(BlurDirection)direction {
     self = [super init];
     if (self) {
         self.mode = mode;
@@ -26,10 +26,9 @@
     return self;
 }
 
-+ (instancetype)taskWithMode:(BlurMode)mode radius:(NSInteger)radius cores:(NSInteger)cores index:(NSInteger)index pixelData:(NSData *)pixelData  width:(NSInteger)w height:(NSInteger)h direction:(BlurDirection)direction {
++ (instancetype)taskWithMode:(BlurMode)mode radius:(NSInteger)radius cores:(NSInteger)cores index:(NSInteger)index pixelData:(NSData *)pixelData width:(NSInteger)w height:(NSInteger)h direction:(BlurDirection)direction {
     return [[self alloc] initWithMode:mode radius:radius cores:cores index:index pixelData:pixelData width:w height:h direction:direction];
 }
-
 
 
 - (void)run {

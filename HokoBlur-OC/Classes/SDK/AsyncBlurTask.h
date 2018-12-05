@@ -17,7 +17,7 @@
 //
 //@end
 
-@interface AsyncBlurTask : NSObject<RunnableTask>
+@interface AsyncBlurTask : NSObject <RunnableTask>
 @property(nonatomic, copy) BlurCompletionHandler completionHandler;
 @property(nonatomic, strong) id <BlurProcessor> processor;
 @property(nonatomic, strong) UIImage *image;

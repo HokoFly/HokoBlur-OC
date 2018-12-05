@@ -16,6 +16,7 @@
 @property(nonatomic, strong) dispatch_queue_t asyncBlurQueue;
 
 @end
+
 @implementation BlurTaskManager {
 
 }
@@ -56,7 +57,7 @@
     });
 }
 
-- (void)invokeAll:(NSArray<id<RunnableTask>> *)tasks {
+- (void)invokeAll:(NSArray<id <RunnableTask>> *)tasks {
     dispatch_group_t group = dispatch_group_create();
     for (BlurSubTask *task in tasks) {
         dispatch_group_async(group, self.parallelBlurQueue, ^{

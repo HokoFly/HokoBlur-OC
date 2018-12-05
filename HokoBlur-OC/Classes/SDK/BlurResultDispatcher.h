@@ -19,5 +19,5 @@
 
 @end
 
-id<BlurResultDispatcher> mainThreadDispatcher(void);
+id <BlurResultDispatcher> mainThreadDispatcher(void);
 

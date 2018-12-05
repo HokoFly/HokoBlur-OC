@@ -14,7 +14,7 @@
 
 @interface HokoBlurViewController ()
 @property(strong, nonatomic) IBOutlet UIImageView *asyncImageView;
-@property (strong, nonatomic) IBOutlet UIImageView *syncImageView;
+@property(strong, nonatomic) IBOutlet UIImageView *syncImageView;
 
 @end
 
@@ -50,13 +50,12 @@
 }
 
 
-
 - (void)setImage:(UIImage *)image to:(UIImageView *)imageView {
 //    __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
 //        __strong typeof(weakSelf) strongSelf = weakSelf;
 //        if (strongSelf) {
-            [imageView setImage:image];
+        [imageView setImage:image];
 //        }
     });
 }

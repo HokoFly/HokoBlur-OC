@@ -28,6 +28,6 @@ extern NSString *_Nonnull const kAsyncBlurErrorDomain;
 + (instancetype)instance;
 
 //reserve for multiple blur schemes
-- (id<HokoBlurChain>)scheme;
+- (id <HokoBlurChain>)scheme;
 
 @end

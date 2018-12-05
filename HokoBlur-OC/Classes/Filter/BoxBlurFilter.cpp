@@ -5,6 +5,7 @@
 #include "BoxBlurFilter.h"
 
 void boxBlurHorizontal(uint32_t *, uint32_t *, int width, int radius, int, int, int, int);
+
 void boxBlurVertical(uint32_t *, uint32_t *, int width, int radius, int, int, int, int);
 
 using namespace hokoblur;
@@ -59,7 +60,7 @@ void boxBlurHorizontal(uint32_t *in, uint32_t *out, int width, int radius, int s
 
         for (int i = -radius; i <= radius; i++) {
             int rgb = in[y * width +
-                          clamp(i, startX, startX + deltaX - 1)];
+                    clamp(i, startX, startX + deltaX - 1)];
             ta += (rgb >> 24) & 0xff;
             tr += (rgb >> 16) & 0xff;
             tg += (rgb >> 8) & 0xff;
@@ -85,7 +86,7 @@ void boxBlurHorizontal(uint32_t *in, uint32_t *out, int width, int radius, int s
             tb += (rgb1 & 0xff) - (rgb2 & 0xff);
 
             out[baseIndex + x] = (divide[ta] << 24) | (divide[tr] << 16) | (divide[tg] << 8) |
-                                 divide[tb];
+                    divide[tb];
         }
     }
 }
@@ -111,7 +112,7 @@ void boxBlurVertical(uint32_t *in, uint32_t *out, int width, int radius, int sta
 
         for (int y = startY; y < startY + deltaY; y++) {
             out[y * width + x] = (divide[ta] << 24) | (divide[tr] << 16) | (divide[tg] << 8) |
-                                 divide[tb];
+                    divide[tb];
 
             int i1 = y + radius + 1;
             if (i1 > startY + deltaY - 1)

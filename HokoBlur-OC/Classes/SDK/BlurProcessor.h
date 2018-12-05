@@ -7,7 +7,7 @@
 
 @class BlurResult;
 
-typedef void(^ BlurCompletionHandler)(BlurResult *);
+typedef void(^BlurCompletionHandler)(BlurResult *_Nonnull);
 
 
 @protocol BlurProcessor <NSObject>
@@ -19,7 +19,7 @@ typedef void(^ BlurCompletionHandler)(BlurResult *);
 @property(nonatomic, assign) CGFloat sampleFactor;
 @property(nonatomic, assign) BOOL forceCopy;
 @property(nonatomic, assign) BOOL needUpscale;
-@property(nonatomic, copy, readonly) UIImage *(^ blur)(UIImage *);
-@property(nonatomic, copy, readonly) void (^ asyncBlur)(UIImage *, BlurCompletionHandler);
+@property(nonatomic, copy, readonly, nonnull) UIImage *_Nonnull (^ blur)(UIImage *_Nonnull);
+@property(nonatomic, copy, readonly, nonnull) void (^ asyncBlur)(UIImage *_Nonnull, BlurCompletionHandler _Nonnull);
 
 @end

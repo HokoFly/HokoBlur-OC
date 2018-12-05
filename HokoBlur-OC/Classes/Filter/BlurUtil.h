@@ -7,7 +7,7 @@
 #define HOKO_BLUR_UTIL_H
 
 namespace hokoblur {
-    enum Direction{
+    enum Direction {
         HORIZONTAL,
         VERTICAL,
         BOTH

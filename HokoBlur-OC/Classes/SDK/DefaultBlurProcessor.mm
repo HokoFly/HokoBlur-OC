@@ -13,7 +13,7 @@
 @implementation DefaultBlurProcessor {
 
 }
-- (NSData *)blurWithData:(NSData *)data width:(NSInteger)w height:(NSInteger)h inParallel:(BOOL)parallel{
+- (NSData *)blurWithData:(NSData *)data width:(NSInteger)w height:(NSInteger)h inParallel:(BOOL)parallel {
     NSData *result = nil;
 
     if (parallel) {

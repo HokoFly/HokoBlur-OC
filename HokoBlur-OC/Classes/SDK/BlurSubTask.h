@@ -7,7 +7,7 @@
 #import "RunnableTask.h"
 
 
-@interface BlurSubTask : NSObject<RunnableTask>
+@interface BlurSubTask : NSObject <RunnableTask>
 
 @property(nonatomic, assign) BlurMode mode;
 @property(nonatomic, assign) NSInteger radius;

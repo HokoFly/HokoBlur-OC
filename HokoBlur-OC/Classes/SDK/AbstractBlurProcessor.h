@@ -24,17 +24,17 @@
 @property(nonatomic, assign) CGFloat sampleFactor;
 @property(nonatomic, assign) BOOL forceCopy;
 @property(nonatomic, assign) BOOL needUpscale;
-@property(nonatomic, copy, readonly) UIImage *(^ blur)(UIImage *);
-@property(nonatomic, copy, readonly) void (^ asyncBlur)(UIImage *, BlurCompletionHandler);
+@property(nonatomic, copy, readonly, nonnull) UIImage *_Nonnull (^ blur)(UIImage *_Nonnull);
+@property(nonatomic, copy, readonly, nonnull) void (^ asyncBlur)(UIImage *_Nonnull, BlurCompletionHandler _Nonnull);
 
-- (NSData *)blurWithData:(NSData *)data width:(NSInteger)w height:(NSInteger)h inParallel:(BOOL)parallel;
+- (NSData *_Nonnull)blurWithData:(NSData *_Nonnull)data width:(NSInteger)w height:(NSInteger)h inParallel:(BOOL)parallel;
 
-- (instancetype)init;
+- (instancetype _Nonnull)init;
 
-- (instancetype)initWithBuilder:(BlurProcessorBuilder *)builder;
+- (instancetype _Nonnull)initWithBuilder:(BlurProcessorBuilder *_Nonnull)builder;
 
-+ (instancetype)makeWithBuilder:(void (^)(BlurProcessorBuilder *))updateBlock;
++ (instancetype _Nonnull)makeWithBuilder:(void (^ _Nonnull)(BlurProcessorBuilder *_Nonnull))updateBlock;
 
-- (instancetype)update:(void (^)(BlurProcessorBuilder *))updateBlock;
+- (instancetype _Nonnull)update:(void (^ _Nonnull)(BlurProcessorBuilder *_Nonnull))updateBlock;
 
 @end

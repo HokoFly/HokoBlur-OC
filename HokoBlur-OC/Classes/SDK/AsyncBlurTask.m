@@ -41,7 +41,7 @@
         }
     }
 
-    @catch (NSException *exception){
+    @catch (NSException *exception) {
         result.success = NO;
         result.error = [NSError errorWithDomain:kAsyncBlurErrorDomain code:HokoBlurErroCodeProcessFailed userInfo:@{NSLocalizedFailureReasonErrorKey: exception.reason}];
     }

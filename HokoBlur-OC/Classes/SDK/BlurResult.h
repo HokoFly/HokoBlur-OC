@@ -6,7 +6,6 @@
 #import "BlurProcessor.h"
 
 
-
 @interface BlurResult : NSObject
 
 @property(nonatomic, assign) BOOL success;

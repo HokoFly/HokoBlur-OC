@@ -85,9 +85,9 @@ void gaussianBlurHorizontal(float *kernel, uint32_t *inPixels, uint32_t *outPixe
 
             int outIndex = ioffset + x;
             uint32_t ia = (inPixels[ioffset + x] >> 24) & 0xff;
-            uint32_t ir = (uint32_t)clamp((uint32_t) (r + 0.5), 0, 255);
-            uint32_t ig = (uint32_t)clamp((uint32_t) (g + 0.5), 0, 255);
-            uint32_t ib = (uint32_t)clamp((uint32_t) (b + 0.5), 0, 255);
+            uint32_t ir = (uint32_t) clamp((uint32_t) (r + 0.5), 0, 255);
+            uint32_t ig = (uint32_t) clamp((uint32_t) (g + 0.5), 0, 255);
+            uint32_t ib = (uint32_t) clamp((uint32_t) (b + 0.5), 0, 255);
             outPixels[outIndex] = (ia << 24) | (ir << 16) | (ig << 8) | ib;
         }
     }
@@ -124,9 +124,9 @@ void gaussianBlurVertical(float *kernel, uint32_t *inPixels, uint32_t *outPixels
             }
             int outIndex = ioffset + y * width;
             uint32_t ia = (inPixels[ioffset + x] >> 24) & 0xff;
-            uint32_t ir = (uint32_t)clamp((uint32_t) (r + 0.5), 0, 255);
-            uint32_t ig = (uint32_t)clamp((uint32_t) (g + 0.5), 0, 255);
-            uint32_t ib = (uint32_t)clamp((uint32_t) (b + 0.5), 0, 255);
+            uint32_t ir = (uint32_t) clamp((uint32_t) (r + 0.5), 0, 255);
+            uint32_t ig = (uint32_t) clamp((uint32_t) (g + 0.5), 0, 255);
+            uint32_t ib = (uint32_t) clamp((uint32_t) (b + 0.5), 0, 255);
             outPixels[outIndex] = (ia << 24) | (ir << 16) | (ig << 8) | ib;
         }
     }

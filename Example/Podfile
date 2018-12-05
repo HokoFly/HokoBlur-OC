@@ -6,6 +6,6 @@ target 'HokoBlur-OC_Example' do
   target 'HokoBlur-OC_Tests' do
     inherit! :search_paths
 
-    
+
   end
 end

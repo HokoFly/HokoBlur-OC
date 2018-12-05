@@ -31,35 +31,35 @@ NSString *_Nonnull const kAsyncBlurErrorDomain = @"com.hoko.blur.async.blur.erro
 
 
 - (id <HokoBlurChain> (^)(BlurMode))mode {
-    return ^id <HokoBlurChain> (BlurMode mode) {
+    return ^id <HokoBlurChain>(BlurMode mode) {
         self.builder.mode = mode;
         return self;
     };
 }
 
 - (id <HokoBlurChain> (^)(NSInteger))radius {
-    return ^id <HokoBlurChain> (NSInteger radius) {
+    return ^id <HokoBlurChain>(NSInteger radius) {
         self.builder.radius = radius;
         return self;
     };
 }
 
 - (id <HokoBlurChain> (^)(CGFloat))sampleFactor {
-    return ^id <HokoBlurChain> (CGFloat sampleFactor) {
+    return ^id <HokoBlurChain>(CGFloat sampleFactor) {
         self.builder.sampleFactor = sampleFactor;
         return self;
     };
 }
 
 - (id <HokoBlurChain> (^)(BOOL))forceCopy {
-    return ^id <HokoBlurChain> (BOOL forceCopy) {
+    return ^id <HokoBlurChain>(BOOL forceCopy) {
         self.builder.forceCopy = forceCopy;
         return self;
     };
 }
 
 - (id <HokoBlurChain> (^)(BOOL))needUpscale {
-    return ^id <HokoBlurChain> (BOOL needUpscale) {
+    return ^id <HokoBlurChain>(BOOL needUpscale) {
         self.builder.needUpscale = needUpscale;
         return self;
     };
@@ -92,7 +92,7 @@ NSString *_Nonnull const kAsyncBlurErrorDomain = @"com.hoko.blur.async.blur.erro
     return sInstance;
 }
 
-- (id<HokoBlurChain>)scheme {
+- (id <HokoBlurChain>)scheme {
     return [[HokoBlurChainImpl alloc] init];
 }
 
