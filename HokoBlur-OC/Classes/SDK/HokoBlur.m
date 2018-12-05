@@ -8,6 +8,8 @@
 #import "DefaultBlurProcessor.h"
 
 
+#pragma -mark HokoBlurChain
+
 @interface HokoBlurChainImpl : NSObject <HokoBlurChain>
 @property(nonatomic, strong) BlurProcessorBuilder *builder;
 
@@ -72,6 +74,7 @@
 @end
 
 
+#pragma -mark EasyHokoBlur
 
 @implementation EasyHokoBlur {
 

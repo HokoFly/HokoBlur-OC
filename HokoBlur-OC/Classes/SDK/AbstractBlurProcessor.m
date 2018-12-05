@@ -5,6 +5,7 @@
 #import "AbstractBlurProcessor.h"
 #import "UIImage+PixelsData.h"
 
+#pragma -mark BlurProcessorBuilder
 
 @implementation BlurProcessorBuilder {
 
@@ -23,6 +24,8 @@
 }
 
 @end
+
+#pragma -mark AbstractBlurProcessor
 
 @implementation AbstractBlurProcessor {
 
