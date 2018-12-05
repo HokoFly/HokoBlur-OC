@@ -15,11 +15,17 @@
 #import "GaussianBlurFilter.h"
 #import "StackBlurFilter.h"
 #import "AbstractBlurProcessor.h"
-#import "BlurFilter.h"
+#import "AsyncBlurTask.h"
 #import "BlurEnum.h"
+#import "BlurFilter.h"
 #import "BlurProcessor.h"
+#import "BlurResult.h"
+#import "BlurResultDispatcher.h"
+#import "BlurSubTask.h"
+#import "BlurTaskManager.h"
 #import "DefaultBlurProcessor.h"
 #import "HokoBlur.h"
+#import "RunnableTask.h"
 #import "UIImage+PixelsData.h"
 
 FOUNDATION_EXPORT double HokoBlur_OCVersionNumber;

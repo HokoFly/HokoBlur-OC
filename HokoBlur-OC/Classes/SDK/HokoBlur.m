@@ -8,6 +8,8 @@
 #import "DefaultBlurProcessor.h"
 
 
+NSString *_Nonnull const kAsyncBlurErrorDomain = @"com.hoko.blur.async.blur.error";
+
 #pragma -mark HokoBlurChain
 
 @interface HokoBlurChainImpl : NSObject <HokoBlurChain>

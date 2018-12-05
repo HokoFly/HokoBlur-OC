@@ -10,6 +10,8 @@
 
 #define HokoBlur ([[EasyHokoBlur instance] scheme])
 
+extern NSString *_Nonnull const kAsyncBlurErrorDomain;
+
 
 @protocol HokoBlurChain <NSObject>
 @property(nonatomic, copy, readonly) id <HokoBlurChain> (^mode)(BlurMode mode);

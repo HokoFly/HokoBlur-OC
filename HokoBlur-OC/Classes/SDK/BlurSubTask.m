@@ -30,10 +30,10 @@
     return [[self alloc] initWithMode:mode radius:radius cores:cores index:index pixelData:pixelData width:w height:h direction:direction];
 }
 
-- (void (^)(void))run {
-    return ^{
-        [self applyPixelsBlur];
-    };
+
+
+- (void)run {
+    [self applyPixelsBlur];
 }
 
 - (void)applyPixelsBlur {

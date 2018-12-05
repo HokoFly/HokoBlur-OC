@@ -4,9 +4,10 @@
 
 #import <Foundation/Foundation.h>
 #import "BlurEnum.h"
+#import "RunnableTask.h"
 
 
-@interface BlurSubTask : NSObject
+@interface BlurSubTask : NSObject<RunnableTask>
 
 @property(nonatomic, assign) BlurMode mode;
 @property(nonatomic, assign) NSInteger radius;
@@ -16,7 +17,6 @@
 @property(nonatomic, assign) BlurDirection direction;
 @property(nonatomic, assign) NSInteger width;
 @property(nonatomic, assign) NSInteger height;
-@property(nonatomic, copy, readonly) void (^run)(void);
 
 
 - (instancetype)initWithMode:(BlurMode)mode radius:(NSInteger)radius cores:(NSInteger)cores index:(NSInteger)index pixelData:(NSData *)pixelData width:(NSInteger)w height:(NSInteger)h direction:(BlurDirection)direction;

@@ -5,13 +5,18 @@
 #import <Foundation/Foundation.h>
 
 @class BlurSubTask;
+@protocol RunnableTask;
 
 
 @interface BlurTaskManager : NSObject
 
 @property(nonatomic, readonly) NSUInteger workersNum;
 @property(nonatomic, readonly, strong) dispatch_queue_t parallelBlurQueue;
+@property(nonatomic, readonly, strong) dispatch_queue_t asyncBlurQueue;
 
-+(instancetype)instance;
--(void)invokeAll:(NSArray<BlurSubTask *> *)tasks;
++ (instancetype)instance;
+
+- (void)submit:(id <RunnableTask>)task;
+
+- (void)invokeAll:(NSArray<id <RunnableTask>> *)tasks;
 @end

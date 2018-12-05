@@ -7,6 +7,15 @@
 #import <sys/sysctl.h>
 
 
+@interface BlurTaskManager () {
+
+}
+
+@property(nonatomic, assign) NSUInteger workersNum;
+@property(nonatomic, strong) dispatch_queue_t parallelBlurQueue;
+@property(nonatomic, strong) dispatch_queue_t asyncBlurQueue;
+
+@end
 @implementation BlurTaskManager {
 
 }
@@ -26,8 +35,9 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _workersNum = [self getProcessorCount];
-        _parallelBlurQueue = dispatch_queue_create("com.hoko.blur.parallel.queue", DISPATCH_QUEUE_CONCURRENT);
+        self.workersNum = [self getProcessorCount];
+        self.parallelBlurQueue = dispatch_queue_create("com.hoko.blur.parallel.queue", DISPATCH_QUEUE_CONCURRENT);
+        self.asyncBlurQueue = dispatch_queue_create("com.hoko.blur.async.queue", DISPATCH_QUEUE_CONCURRENT);
     }
 
     return self;
@@ -40,12 +50,17 @@
     return ncpu;
 }
 
+- (void)submit:(id <RunnableTask>)task {
+    dispatch_async(self.asyncBlurQueue, ^{
+        [task run];
+    });
+}
 
-- (void)invokeAll:(NSArray<BlurSubTask *> *)tasks {
+- (void)invokeAll:(NSArray<id<RunnableTask>> *)tasks {
     dispatch_group_t group = dispatch_group_create();
     for (BlurSubTask *task in tasks) {
         dispatch_group_async(group, self.parallelBlurQueue, ^{
-            task.run();
+            [task run];
         });
     }
 

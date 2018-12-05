@@ -17,3 +17,10 @@ typedef NS_ENUM(NSUInteger, BlurDirection) {
     DIRECTION_VERTICAL = 1,
     DIRECTION_BOTH = 2,
 };
+
+typedef NS_ENUM(NSUInteger, BlurErrorCode) {
+    HokoBlurErroCodeNoProcessor = 100,
+    HokoBlurErroCodeProcessFailed = 101,
+};
+
+

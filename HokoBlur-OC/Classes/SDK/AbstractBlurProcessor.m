@@ -4,6 +4,8 @@
 
 #import "AbstractBlurProcessor.h"
 #import "UIImage+PixelsData.h"
+#import "BlurTaskManager.h"
+#import "AsyncBlurTask.h"
 
 #pragma -mark BlurProcessorBuilder
 
@@ -66,6 +68,13 @@
     }
 
     return outImage;
+}
+
+- (void (^)(UIImage *, BlurCompletionHandler))asyncBlur {
+    return ^(UIImage *image, BlurCompletionHandler completionHandler) {
+        id<RunnableTask> task = [AsyncBlurTask taskWithDelegate:completionHandler processor:self image:image];
+        [[BlurTaskManager instance] submit:task];
+    };
 }
 
 - (void)checkParameters {
