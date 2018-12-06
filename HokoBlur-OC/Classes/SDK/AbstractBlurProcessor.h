@@ -25,7 +25,7 @@
 @property(nonatomic, assign) BOOL forceCopy;
 @property(nonatomic, assign) BOOL needUpscale;
 @property(nonatomic, copy, readonly, nonnull) UIImage *_Nonnull (^ blur)(UIImage *_Nonnull);
-@property(nonatomic, copy, readonly, nonnull) void (^ asyncBlur)(UIImage *_Nonnull, BlurCompletionHandler _Nonnull);
+@property(nonatomic, copy, readonly, nonnull) dispatch_block_t _Nonnull (^ asyncBlur)(UIImage *_Nonnull, BlurCompletionHandler _Nonnull);
 
 - (NSData *_Nonnull)blurWithData:(NSData *_Nonnull)data width:(NSInteger)w height:(NSInteger)h inParallel:(BOOL)parallel;
 

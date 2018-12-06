@@ -29,7 +29,7 @@
         UIImage *image = [UIImage imageNamed:@"sample1"];
         [self setImage:image to:self.asyncImageView];
         @weakify(self);
-        HokoBlur.mode(BLUR_MODE_STACK)
+        dispatch_block_t cancellableTask = HokoBlur.mode(BLUR_MODE_STACK)
                 .radius(20)
                 .sampleFactor(5.0f)
                 .processor()
@@ -39,6 +39,9 @@
                         [self setImage:[result image] to:self.asyncImageView];
                     }
                 });
+
+        //test cancel
+//        dispatch_block_cancel(cancellableTask);
 
         UIImage *blurred = HokoBlur.mode(BLUR_MODE_STACK)
                 .radius(10)

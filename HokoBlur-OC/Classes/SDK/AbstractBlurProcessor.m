@@ -70,10 +70,10 @@
     return outImage;
 }
 
-- (void (^)(UIImage *, BlurCompletionHandler))asyncBlur {
-    return ^(UIImage *image, BlurCompletionHandler completionHandler) {
+- (dispatch_block_t (^)(UIImage *, BlurCompletionHandler))asyncBlur {
+    return ^dispatch_block_t(UIImage *image, BlurCompletionHandler completionHandler) {
         id <RunnableTask> task = [AsyncBlurTask taskWithDelegate:completionHandler processor:self image:image];
-        [[BlurTaskManager instance] submit:task];
+        return [[BlurTaskManager instance] submit:task];
     };
 }
 

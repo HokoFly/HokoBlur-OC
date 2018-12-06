@@ -51,10 +51,15 @@
     return ncpu;
 }
 
-- (void)submit:(id <RunnableTask>)task {
-    dispatch_async(self.asyncBlurQueue, ^{
+- (dispatch_block_t)submit:(id <RunnableTask>)task {
+    //api ios 8 later
+    dispatch_block_t taskFuture = dispatch_block_create(0, ^{
         [task run];
     });
+
+    dispatch_async(self.asyncBlurQueue, taskFuture);
+
+    return taskFuture;
 }
 
 - (void)invokeAll:(NSArray<id <RunnableTask>> *)tasks {

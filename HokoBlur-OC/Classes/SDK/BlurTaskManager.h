@@ -16,7 +16,7 @@
 
 + (instancetype)instance;
 
-- (void)submit:(id <RunnableTask>)task;
+- (dispatch_block_t)submit:(id <RunnableTask>)task;
 
 - (void)invokeAll:(NSArray<id <RunnableTask>> *)tasks;
 @end
