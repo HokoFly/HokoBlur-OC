@@ -19,5 +19,6 @@
 
 @end
 
-id <BlurResultDispatcher> mainThreadDispatcher(void);
+#define MAIN_THREAD_DISPATCHER ([[BlurResultDispatcherImpl alloc] initWithDispatchQueue:dispatch_get_main_queue()])
+
 

@@ -18,7 +18,7 @@
         self.completionHandler = completionHandler;
         self.processor = processor;
         self.image = image;
-        self.resultDispacher = mainThreadDispatcher();
+        self.resultDispacher = MAIN_THREAD_DISPATCHER;
     }
 
     return self;

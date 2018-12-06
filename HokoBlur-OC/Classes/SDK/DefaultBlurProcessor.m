@@ -11,7 +11,7 @@
 
 }
 - (NSData *)blurWithData:(NSData *)data width:(NSInteger)w height:(NSInteger)h inParallel:(BOOL)parallel {
-    NSData *result = nil;
+    NSData *result = data;
 
     if (parallel) {
         NSUInteger cores = [BlurTaskManager instance].workersNum;
@@ -24,8 +24,6 @@
 
         [[BlurTaskManager instance] invokeAll:hTasks];
         [[BlurTaskManager instance] invokeAll:vTasks];
-        result = data;
-
     } else {
         result = [BlurFilter blurInSingleBlock:data mode:self.mode radius:self.radius width:w height:h];
     }

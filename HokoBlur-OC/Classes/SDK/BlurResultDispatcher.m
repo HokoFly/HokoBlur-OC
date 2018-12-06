@@ -64,6 +64,3 @@
 
 @end
 
-id <BlurResultDispatcher> mainThreadDispatcher(void) {
-    return [[BlurResultDispatcherImpl alloc] initWithDispatchQueue:dispatch_get_main_queue()];
-}
