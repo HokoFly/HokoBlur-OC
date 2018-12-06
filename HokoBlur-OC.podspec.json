@@ -30,7 +30,10 @@
     {
       "public_header_files": "HokoBlur-OC/Classes/SDK/**/*.h",
       "name": "SDK",
-      "source_files": "HokoBlur-OC/Classes/SDK/**/*"
+      "source_files": "HokoBlur-OC/Classes/SDK/**/*",
+      "dependencies": {
+        "libextobjc": []
+      }
     }
   ]
 }

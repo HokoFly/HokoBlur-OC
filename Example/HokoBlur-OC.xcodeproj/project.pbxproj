@@ -115,9 +115,6 @@
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				18833FAC2B7B3A4A2F993251 /* Pods */,
-				84A31C9B5B6B672A0446838D,
-				84A31D6F3AAB12BEDA09AD45,
-				84A319A9D5B4D817A9442DCD /* BlurResultDelegateCaller.m */,
 			);
 			sourceTree = "<group>";
 		};
@@ -310,12 +307,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HokoBlur-OC_Example/Pods-HokoBlur-OC_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/HokoBlur-OC/HokoBlur_OC.framework",
+				"${BUILT_PRODUCTS_DIR}/libextobjc/libextobjc.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HokoBlur_OC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libextobjc.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
