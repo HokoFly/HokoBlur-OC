@@ -9,13 +9,6 @@
 @protocol BlurProcessor;
 @protocol BlurResultDispatcher;
 @class BlurResult;
-//
-//@protocol AsyncBlurTaskDelegate <NSObject>
-//
-//-(void)onSuccess:(UIImage *)image;
-//-(void)onFailed:(NSError *)error;
-//
-//@end
 
 @interface AsyncBlurTask : NSObject <RunnableTask>
 @property(nonatomic, copy) BlurCompletionHandler completionHandler;

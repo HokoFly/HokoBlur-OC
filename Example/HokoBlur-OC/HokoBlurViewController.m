@@ -10,6 +10,7 @@
 #import "DefaultBlurProcessor.h"
 #import "HokoBlur.h"
 #import "BlurResult.h"
+#import <libextobjc/EXTScope.h>
 
 
 @interface HokoBlurViewController ()
@@ -27,11 +28,13 @@
     dispatch_async(blurQueue, ^{
         UIImage *image = [UIImage imageNamed:@"sample1"];
         [self setImage:image to:self.asyncImageView];
+        @weakify(self);
         HokoBlur.mode(BLUR_MODE_STACK)
                 .radius(20)
                 .sampleFactor(5.0f)
                 .processor()
                 .asyncBlur(image, ^(BlurResult *result) {
+                    @strongify(self)
                     if ([result success]) {
                         [self setImage:[result image] to:self.asyncImageView];
                     }
@@ -51,12 +54,8 @@
 
 
 - (void)setImage:(UIImage *)image to:(UIImageView *)imageView {
-//    __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-//        __strong typeof(weakSelf) strongSelf = weakSelf;
-//        if (strongSelf) {
         [imageView setImage:image];
-//        }
     });
 }
 
